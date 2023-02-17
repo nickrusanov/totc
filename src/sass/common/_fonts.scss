@@ -8,4 +8,11 @@
 	}
 }
 
-// @include font-face("Montserrat", "#{$fonts-root}Montserrat-Bold", normal, 700);
+@include font-face("GolosText", "#{$fonts-root}GolosText-Regular", normal, 400);
+@include font-face("GolosText", "#{$fonts-root}GolosText-Medium", normal, 500);
+@include font-face("GolosText", "#{$fonts-root}GolosText-SemiBold", normal, 600);
+@include font-face("GolosText", "#{$fonts-root}GolosText-Bold", normal, 700);
+
+@include font-face("NunitoSans", "#{$fonts-root}NunitoSans-Regular", normal, 400);
+@include font-face("NunitoSans", "#{$fonts-root}NunitoSans-SemiBold", normal, 600);
+@include font-face("NunitoSans", "#{$fonts-root}NunitoSans-Bold", normal, 700);

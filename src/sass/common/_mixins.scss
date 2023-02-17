@@ -27,3 +27,7 @@
 		@content;
 	}
 }
+
+@mixin appear($duration, $delay) {
+	transition: all .3s ease, opacity $duration ease $delay, transform $duration ease $delay;
+}

@@ -1,5 +1,10 @@
-# Gulp-Starter (template)
+# TOTC (обучающая платформа)
 
-Gulp-сборка для вёрстки.
+Ссылка на GitHub Pages: https://nickrusanov.github.io/totc/
 
-Задачи для HTML, SCSS, JavaScript, Img, Fonts.
+Многостраничный сайт.
+
+Проект включает:
+1. Адаптивность до 320px.
+2. Эффекты при наведении и анимации.
+3. Технологии: HTML5, CSS3, SCSS, JavaScript, jQuery, Gulp.

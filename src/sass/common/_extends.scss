@@ -1,0 +1,21 @@
+%trans {
+	transition: all .3s ease;
+}
+
+%btn-main {
+	@extend %trans;
+
+	width: 100%;
+	max-width: 250px;
+	padding: 16px;
+
+	color: var(--color-btn-text);
+
+	border: 2px solid var(--color-btn-bg);
+	border-radius: 40px;
+
+	&:hover {
+		background-color: var(--color-btn-bg);
+		color: var(--color-btn-text--hover);
+	}
+}

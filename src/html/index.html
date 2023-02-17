@@ -1,15 +1,272 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 @@include('./components/head.html', {
-	"title": "",
-	"description": ""
+"title": "Главная | TOTC",
+"description": "TOTC — современная платформа, созданная для интерактивного обучения."
 })
 
-<body>
+<body class="home" id="top">
+	<style type="text/css">
+		@keyframes preload {
+			from {
+				transform: rotate(-45deg);
+			}
+
+			to {
+				transform: rotate(315deg);
+			}
+		}
+
+		.preloader {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			gap: 5px;
+			width: 100%;
+			height: 100vh;
+
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 1000;
+			opacity: 1;
+
+			background-color: white;
+
+			transition: all .4s ease .2s;
+		}
+
+		.preloader--hide {
+			opacity: 0;
+		}
+
+		.preloader img {
+			display: block;
+			width: 30px;
+			transform-origin: center;
+
+			opacity: 0.75;
+
+			animation: preload 1s ease 0s infinite;
+		}
+	</style>
+
+	<div class="preloader">
+		<img src="./img/loading.png" alt="loading">
+	</div>
+
+	<script type="text/javascript">
+		window.onload = function () {
+			document.querySelector('.preloader').classList.add('preloader--hide');
+		}
+	</script>
+
+	<noscript>
+		<style>
+			.preloader {
+				display: none !important;
+			}
+		</style>
+	</noscript>
+
 	@@include('./components/header.html')
 
-	<main class="main"></main>
+	<main class="main">
+		<section class="seller">
+			<div class="container">
+				<div class="seller__inner">
+					<div class="seller__content">
+						<div class="seller__content-inner">
+							<h1 class="title-1 seller__title-1 hidden"><strong>Учиться</strong> онлайн стало намного проще</h1>
+							<p class="text seller__text hidden">TOTC — современная платформа, созданная для интерактивного обучения.
+							</p>
+
+							<div class="seller__btn-box">
+								<button class="seller__request-btn hidden" type="button">Консультация</button>
+
+								<div class="seller__play-box hidden">
+									<button class="seller__play-btn">
+										<svg class="seller__play-svg" width="32" height="34" viewBox="0 0 32 34" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M30.6104 16.1476C31.2466 16.5378 31.2466 17.4622 30.6104 17.8524L9.52289 30.7882C8.85658 31.197 8 30.7175 8 29.9358L8 4.06416C8 3.28247 8.85658 2.80302 9.52289 3.21176L30.6104 16.1476Z"
+												fill="#23BDEE" />
+										</svg>
+									</button>
+
+									<p class="seller__play-text">как это работает</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="seller__box">
+						<picture>
+							<source srcset="./img/home/girl.webp" type="image/webp">
+							<img class="seller__img hidden" src="./img/home/girl.png" alt="girl">
+						</picture>
+
+						<div class="seller__message hidden">
+							<svg class="seller__message-svg" width="50" height="50" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0 8.5a8 8 0 0 1 8-8h34a8 8 0 0 1 8 8v34a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8v-34z" fill="#23BDEE" />
+								<path class="changeable"
+									d="M18 11.5a1 1 0 0 0-1 1v2h2v-2a1 1 0 0 0-1-1zM32 11.5a1 1 0 0 0-1 1v2h2v-2a1 1 0 0 0-1-1zM36 14.5h-3v4a1 1 0 1 1-2 0v-4H19v4a1 1 0 1 1-2 0v-4h-3a3 3 0 0 0-3 3v19a3 3 0 0 0 3 3h22a3 3 0 0 0 3-3v-19a3 3 0 0 0-3-3zm1 22a1 1 0 0 1-1 1H14a1 1 0 0 1-1-1v-13h24v13z" />
+								<path class="changeable"
+									d="M19 25.5h-2a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2zM26 25.5h-2a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2zM33 25.5h-2a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2zM19 29.5h-2a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2zM26 29.5h-2a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2zM33 29.5h-2a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2zM19 33.5h-2a1 1 0 1 0 0 2h2a1 1 0 0 0 0-2zM26 33.5h-2a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2zM33 33.5h-2a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2z" />
+							</svg>
+
+							<div class="seller__message-box">
+								<p class="seller__message-title">Календарь</p>
+								<p class="seller__message-text">Выберите время</p>
+							</div>
+						</div>
+
+						<div class="seller__message hidden">
+							<svg class="seller__message-svg" width="50" height="50" viewBox="0 0 50 50" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M0 8C0 3.58172 3.58172 0 8 0H42C46.4183 0 50 3.58172 50 8V42C50 46.4183 46.4183 50 42 50H8C3.58172 50 0 46.4183 0 42V8Z"
+									fill="#F88C3D" />
+								<path class="changeable" d="M38 15H12L25 25.708L38.147 15.03C38.0989 15.0159 38.0497 15.0059 38 15Z" />
+								<path class="changeable"
+									d="M25.631 27.776C25.2625 28.0777 24.7324 28.0777 24.364 27.776L11 16.766V34C11 34.5523 11.4477 35 12 35H38C38.5523 35 39 34.5523 39 34V16.914L25.631 27.776Z" />
+							</svg>
+
+							<div class="seller__message-box">
+								<p class="seller__message-title">Поздравляем</p>
+								<p class="seller__message-text">Экзамен успешно сдан</p>
+							</div>
+						</div>
+
+						<div class="seller__message hidden">
+							<picture>
+								<source srcset="./img/home/man.webp" type="image/webp">
+								<img class="seller__message-img" src="./img/home/man.png" alt="man">
+							</picture>
+
+							<div class="seller__message-box">
+								<p class="seller__message-title">Конференция</p>
+								<p class="seller__message-btn">Присоединиться</p>
+							</div>
+						</div>
+
+						<div class="seller__decor hidden">
+							<svg class="seller__message-svg" width="69" height="69" viewBox="0 0 69 69" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<rect width="69" height="69" rx="14" fill="#F3627C" />
+								<rect class="changeable" x="11.35" y="12.075" width="47.3" height="44.85" rx="8" />
+								<path d="M34 22V47" stroke="#F25471" stroke-width="4" stroke-linecap="round" />
+								<path d="M26 27L26 47" stroke="#F25471" stroke-width="4" stroke-linecap="round" />
+								<path d="M42 32V47" stroke="#F25471" stroke-width="4" stroke-linecap="round" />
+							</svg>
+						</div>
+					</div>
+
+					<button class="seller__shift-btn hidden">
+						<svg width="69" height="40" viewBox="0 0 69 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M67.6346 7.92627L37.0488 38.9862C36.6847 39.3548 36.2902 39.6154 35.8654 39.7677C35.4406 39.9226 34.9855 40 34.5 40C34.0145 40 33.5594 39.9226 33.1346 39.7677C32.7098 39.6154 32.3153 39.3548 31.9512 38.9862L1.2744 7.92627C0.4248 7.06606 -1.48659e-06 5.99079 -1.54299e-06 4.70046C-1.59939e-06 3.41014 0.455143 2.30415 1.36543 1.38249C2.27572 0.460834 3.33773 3.6688e-06 4.55145 3.61575e-06C5.76517 3.56269e-06 6.82717 0.460834 7.73746 1.38249L34.5 28.4793L61.2625 1.38249C62.1121 0.522275 63.1584 0.092168 64.4012 0.0921679C65.6465 0.0921678 66.7243 0.552995 67.6346 1.47466C68.5449 2.39631 69 3.47158 69 4.70046C69 5.92934 68.5449 7.00461 67.6346 7.92627Z" />
+						</svg>
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<section class="about" id="about">
+			<div class="container">
+				<div class="about__box">
+					<div class="about__content">
+						<h2 class="title-2 about__title-2">Что такое <strong>TOTC?</strong></h2>
+
+						<p class="text about__text">
+							TOTC — современная платформа, которая создана для интерактивного обучения. Соберите курсы в удобном
+							конструкторе в пару кликов. Автоматизируйте онбординг — ускорьте адаптацию сотрудников. Контролируйте
+							результат с помощью понятной статистики.
+						</p>
+
+						<button class="btn-main about__btn-main">О компании</button>
+					</div>
+
+					<div class="about__decor">
+						<picture>
+							<source srcset="./img/home/about-img.webp" type="image/webp">
+							<img class="about__img" src="./img/home/about-img.png" alt="Конференция">
+						</picture>
+					</div>
+				</div>
+
+				<div class="statistic about__statistic">
+					<ul class="statistic__list">
+						<li class="statistic__item">
+							<p class="statistic__num">16</p>
+							<p class="statistic__text">лет на рынке</p>
+						</li>
+
+						<li class="statistic__item">
+							<p class="statistic__num">15K+</p>
+							<p class="statistic__text">студентов</p>
+						</li>
+
+						<li class="statistic__item">
+							<p class="statistic__num">35</p>
+							<p class="statistic__text">онлайн-курсов</p>
+						</li>
+
+						<li class="statistic__item">
+							<p class="statistic__num">43</p>
+							<p class="statistic__text">ментора</p>
+						</li>
+
+						<li class="statistic__item">
+							<p class="statistic__num">99%</p>
+							<p class="statistic__text">эффективность</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<nav class="side-nav">
+		<ul class="side-nav__list">
+			<li class="side-nav__item">
+				<a class="side-nav__link" href="#top"></a>
+				<p class="side-nav__tooltip">Начало</p>
+			</li>
+
+			<li class="side-nav__item">
+				<a class="side-nav__link" href="#about"></a>
+				<p class="side-nav__tooltip">О компании</p>
+			</li>
+			<!-- 
+			<li class="side-nav__item">
+				<a class="side-nav__link" href="#"></a>
+				<p class="side-nav__tooltip">Наши клиенты</p>
+			</li>
+
+			<li class="side-nav__item">
+				<a class="side-nav__link" href="#"></a>
+				<p class="side-nav__tooltip">Наши особенности</p>
+			</li>
+
+			<li class="side-nav__item">
+				<a class="side-nav__link" href="#"></a>
+				<p class="side-nav__tooltip">Отзывы</p>
+			</li>
+
+			<li class="side-nav__item">
+				<a class="side-nav__link" href="#"></a>
+				<p class="side-nav__tooltip">Статьи</p>
+			</li>
+
+			<li class="side-nav__item">
+				<a class="side-nav__link" href="#"></a>
+				<p class="side-nav__tooltip">Попробовать</p>
+			</li> -->
+		</ul>
+	</nav>
 
 	@@include('./components/footer.html')
 

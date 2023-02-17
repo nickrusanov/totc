@@ -1,0 +1,41 @@
+@keyframes decor-move-left {
+	from {
+		transform: translate(0, 0);
+	}
+
+	50% {
+		transform: translate(7px, 0px);
+	}
+
+	to {
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes decor-move-right {
+	from {
+		transform: translate(0, 0);
+	}
+
+	50% {
+		transform: translate(-7px, 0px);
+	}
+
+	to {
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes arrow-down-move {
+	from {
+		transform: translate(-50%, 0px);
+	}
+
+	40% {
+		transform: translate(-50%, 12px);
+	}
+
+	to {
+		transform: translate(-50%, 0px);
+	}
+}
