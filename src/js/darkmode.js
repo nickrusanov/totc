@@ -1,6 +1,6 @@
 import $ from "jquery";
 
-$(function () {
+$(window).on('load', function () {
 	$('.header__darkmode-btn').on('click', () => {
 		$('.header__darkmode-img').toggleClass('header__darkmode-img--active');
 		$('.header__darkmode-svg').toggleClass('header__darkmode-svg--active');

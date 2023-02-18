@@ -16,3 +16,5 @@
 @include font-face("NunitoSans", "#{$fonts-root}NunitoSans-Regular", normal, 400);
 @include font-face("NunitoSans", "#{$fonts-root}NunitoSans-SemiBold", normal, 600);
 @include font-face("NunitoSans", "#{$fonts-root}NunitoSans-Bold", normal, 700);
+
+@include font-face("RobotoMono", "#{$fonts-root}RobotoMono-Medium", normal, 500);

@@ -153,6 +153,8 @@
 	}
 
 	&__login-btn {
+		@extend %trans;
+
 		margin-left: 50px;
 		padding: 8px 30px;
 
@@ -162,11 +164,13 @@
 		border-radius: 40px;
 		border: 2px solid var(--color-header-text);
 
-		transition: all 0.5s ease, color 0.3s ease;
-
 		&:hover {
 			background-color: var(--color-header-text);
 			color: var(--color-header-btn--hover);
+		}
+
+		&:active {
+			transform: scale(0.9);
 		}
 	}
 
@@ -231,6 +235,7 @@
 		&--submenu:hover .subnav {
 			transform: translateX(-50%) scale(1);
 			opacity: 1;
+			visibility: visible;
 		}
 
 		&--tablet {
@@ -277,6 +282,7 @@
 	transform: translateX(-50%) scale(0);
 
 	opacity: 0;
+	visibility: hidden;
 	transform-origin: top;
 
 	transition: all 0.5s ease, opacity 0.3s ease-in;
@@ -467,6 +473,7 @@
 
 	.nav__item--submenu:hover::after {
 		transform: none;
+		
 	}
 
 	.nav__item--submenu-active:after,
@@ -520,6 +527,7 @@
 		transform: none;
 
 		opacity: 1;
+		visibility: visible;
 
 		&--active {
 			display: block;

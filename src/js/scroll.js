@@ -1,6 +1,6 @@
 import $ from 'jquery'
 
-$(function () {
+$(window).on('load', function () {
 
 	// HEADER 
 	

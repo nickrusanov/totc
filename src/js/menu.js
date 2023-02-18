@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-$(function () {
+$(window).on('load', function () {
 	const menuClose = () => {
 		$('.nav__inner').removeClass('nav__inner--visible');
 		$('.header__nav').removeClass('header__nav--visible');

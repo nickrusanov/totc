@@ -57,6 +57,7 @@
 	--color-footer-bg: var(--color-grey);
 
 	// VAR
+	--margin-section: 100px;
 	--margin-block: 100px;
 	--margin-el: 40px;
 }
@@ -148,7 +149,7 @@ main {
 	font: 2.5rem/1.3 $font-primary;
 	font-weight: 600;
 
-	@include appear(0.5s, 0.6s);
+	@extend %appear;
 
 	&.hidden {
 		opacity: 0;
@@ -165,6 +166,13 @@ main {
 
 	strong {
 		color: var(--color-title-accent);
+	}
+
+	@extend %appear;
+
+	&.hidden {
+		opacity: 0;
+		transform: translateY(50px);
 	}
 }
 
@@ -190,7 +198,7 @@ main {
 }
 
 .text {
-	@include appear(0.5s, 0.8s);
+	@extend %appear;
 
 	&.hidden {
 		opacity: 0;
@@ -213,6 +221,7 @@ main {
 
 @include lg {
 	:root {
+		--margin-section: 40px;
 		--margin-block: 40px;
 		--margin-el: 20px;
 	}
@@ -234,7 +243,8 @@ main {
 	}
 
 	:root {
-		--margin-block: 0px;
+		--margin-section: 0;
+		--margin-block: 30px;
 		--margin-el: 20px;
 	}
 }

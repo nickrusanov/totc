@@ -2,8 +2,12 @@
 	transition: all .3s ease;
 }
 
+%appear {
+	transition: all .3s ease, opacity .6s ease, transform .6s ease;
+}
+
 %btn-main {
-	@extend %trans;
+	@extend %appear;
 
 	width: 100%;
 	max-width: 250px;
@@ -14,8 +18,19 @@
 	border: 2px solid var(--color-btn-bg);
 	border-radius: 40px;
 
+	&.hidden {
+		opacity: 0;
+		transform: scale(0);
+	}
+
 	&:hover {
 		background-color: var(--color-btn-bg);
 		color: var(--color-btn-text--hover);
+	}
+
+	&:active {
+		transform: scale(0.9);
+
+		transition: all .3s ease;
 	}
 }
