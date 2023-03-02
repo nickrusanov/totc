@@ -3,7 +3,7 @@ import $ from 'jquery'
 $(window).on('load', function () {
 
 	// HEADER 
-	
+
 	const headerChange = () => {
 		if (window.scrollY > 200) {
 			$('.header').addClass('header--fixed');
@@ -17,13 +17,13 @@ $(window).on('load', function () {
 			? $('.header').addClass('header--animation')
 			: $('.header').removeClass('header--animation');
 	}
-	
+
 	$('.side-nav__link').each(function () {
 		this.addEventListener('click', function () {
 			window.removeEventListener('scroll', headerChange);
 
 			$('html').animate({
-				scrollTop: $(`${this.getAttribute('href')}`).offset().top - 140
+				scrollTop: $(`${this.getAttribute('href')}`).offset().top - 40
 			}, 500)
 
 			setTimeout(() => {
@@ -82,9 +82,18 @@ $(window).on('load', function () {
 
 	// SWIPE BOTTOM
 
-	$('.seller__shift-btn').click(function () {
+	$('.seller__shift-btn').on('click', function () {
 		$('html').animate({
 			scrollTop: $('#about').offset().top - 40
 		}, 500)
+	})
+
+
+	// SALE
+
+	window.addEventListener('scroll', () => {
+		if (window.scrollY > 1000) {
+			$('.sale').addClass('sale--visible');
+		}
 	})
 })

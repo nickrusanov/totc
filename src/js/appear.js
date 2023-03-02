@@ -6,7 +6,7 @@ $(window).on('load', function () {
 	const showElement = (elements) => {
 		let order = 0;
 
-		setTimeout(() => order = 0, 500)
+		setTimeout(() => order = 0, 500);
 
 		elements.forEach(el => {
 			if (el.isIntersecting) {

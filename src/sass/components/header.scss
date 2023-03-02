@@ -232,7 +232,8 @@
 			transform: rotate(180deg);
 		}
 
-		&--submenu:hover .subnav {
+		&--submenu:hover .subnav,
+		&--submenu:focus .subnav {
 			transform: translateX(-50%) scale(1);
 			opacity: 1;
 			visibility: visible;
@@ -305,7 +306,7 @@
 		padding: 20px 0;
 
 		background-color: var(--color-header-text);
-		box-shadow: 0 4px 8px rgba(#000, 0.25);
+		box-shadow: 0 4px 8px var(--color-shadow);
 		border-radius: 20px;
 	}
 
@@ -318,6 +319,35 @@
 
 		&:hover {
 			background-color: var(--color-header-submenu--hover);
+		}
+	}
+
+	&__btn {
+		display: block;
+		padding: 3px 35px;
+
+		font-size: 20px;
+		color: var(--color-text);
+
+		position: relative;
+
+		&:hover {
+			background-color: var(--color-header-submenu--hover);
+		}
+
+		&:before {
+			content: "";
+			width: 24px;
+			height: 18px;
+
+			position: absolute;
+			left: 0;
+			top: 6px;
+		}
+
+		&--active:before {
+			background-color: var(--color-text);
+			mask-image: url("../img/icon/check.svg");
 		}
 	}
 }
@@ -370,6 +400,7 @@
 			}
 
 			&:nth-child(2) {
+				width: 0;
 				opacity: 0;
 				transform-origin: left;
 			}
@@ -473,7 +504,6 @@
 
 	.nav__item--submenu:hover::after {
 		transform: none;
-		
 	}
 
 	.nav__item--submenu-active:after,
@@ -536,7 +566,7 @@
 
 	.subnav__list {
 		padding: 0;
-		
+
 		box-shadow: none;
 	}
 

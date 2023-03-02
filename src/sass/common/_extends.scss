@@ -34,3 +34,35 @@
 		transition: all .3s ease;
 	}
 }
+
+%btn-main-solid {
+	@extend %appear;
+
+	display: block;
+
+	width: 100%;
+	max-width: 250px;
+	padding: 20px 38px;
+
+	color: var(--color-bg);
+
+	background-color: var(--color-btn-bg);
+	border-radius: 40px;
+
+	font-weight: 600;
+
+	&.hidden {
+		opacity: 0;
+		transform: scale(0);
+	}
+
+	&:hover {
+		background-color: var(--color-btn-bg--hover);
+	}
+
+	&:active {
+		transform: scale(0.9);
+
+		transition: all .3s ease;
+	}
+}
