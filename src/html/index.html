@@ -25,15 +25,14 @@
 								<a class="seller__request-btn modal-btn hidden" role="button" href="#consultation">Консультация</a>
 
 								<div class="seller__play-box hidden">
-									<button class="seller__play-btn">
+									<a class="seller__play-btn" href="https://youtu.be/Q_09bR-P0Ug" data-fancybox>
 										<svg class="seller__play-svg" width="32" height="34" viewBox="0 0 32 34" fill="none"
 											xmlns="http://www.w3.org/2000/svg">
 											<path
 												d="M30.6104 16.1476C31.2466 16.5378 31.2466 17.4622 30.6104 17.8524L9.52289 30.7882C8.85658 31.197 8 30.7175 8 29.9358L8 4.06416C8 3.28247 8.85658 2.80302 9.52289 3.21176L30.6104 16.1476Z"
 												fill="#23BDEE" />
 										</svg>
-									</button>
-
+									</a>
 									<p class="seller__play-text">как это работает</p>
 								</div>
 							</div>
@@ -359,7 +358,8 @@
 							где и когда им удобно.</p>
 
 						<div class="features__links">
-							<a class="brand-link features__brand-link hidden" href="https://www.apple.com/ru/app-store/" target="_blank">
+							<a class="brand-link features__brand-link hidden" href="https://www.apple.com/ru/app-store/"
+								target="_blank">
 								<picture>
 									<source srcset="./img/apple.webp" type="image/webp">
 									<img class="brand-link__img" src="./img/apple.png" alt="apple">
@@ -371,7 +371,8 @@
 								</div>
 							</a>
 
-							<a class="brand-link features__brand-link hidden" href="https://play.google.com/store/apps" target="_blank">
+							<a class="brand-link features__brand-link hidden" href="https://play.google.com/store/apps"
+								target="_blank">
 								<picture>
 									<source srcset="./img/google.webp" type="image/webp">
 									<img class="brand-link__img" src="./img/google.png" alt="google">
@@ -417,7 +418,7 @@
 			</p>
 		</section>
 
-		<section class="feedback" id="feedback">
+		<section class="feedback timerOff" id="feedback">
 			<div class="container">
 				<div class="feedback__inner">
 					<div class="feedback__content">
@@ -734,10 +735,12 @@
 				<p class="modal__title-2 title-2">Оставить отзыв</p>
 
 				<form class="modal__form" action="#">
-					<input class="input modal__input" type="text" placeholder="Укажите ваше имя" name="review-name" required="required">
+					<input class="input modal__input" type="text" placeholder="Укажите ваше имя" name="review-name"
+						required="required">
 					<input class="input modal__input" type="email" placeholder="Укажите ваш email" name="review-email"
 						required="required">
-					<textarea class="textarea modal__textarea" name="review-message" placeholder="Напишите отзыв" required></textarea>
+					<textarea class="textarea modal__textarea" name="review-message" placeholder="Напишите отзыв"
+						required></textarea>
 					<button class="modal__send" type="submit">Отправить</button>
 				</form>
 

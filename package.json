@@ -37,5 +37,8 @@
 		"slick-carousel": "^1.8.1",
 		"webpack": "^5.75.0",
 		"webpack-stream": "^7.0.0"
+	},
+	"dependencies": {
+		"@fancyapps/ui": "^5.0.5"
 	}
 }

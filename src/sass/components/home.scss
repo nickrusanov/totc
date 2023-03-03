@@ -1208,6 +1208,7 @@
 		@extend %appear;
 
 		margin: 0 auto;
+		text-align: center;
 
 		&.hidden {
 			transform: scale(0);

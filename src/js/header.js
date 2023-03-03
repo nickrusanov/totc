@@ -125,6 +125,8 @@ $(window).on('load', function () {
 			default:
 				systemThemeOn();
 		}
+
+		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', systemThemeOn)
 	}
 
 	darkmodeInit();

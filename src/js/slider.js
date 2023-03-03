@@ -46,12 +46,23 @@ $(window).on('load', function () {
 			feedbackTimerNewOn = true;
 		}
 
-		let feedbackTimer = setInterval(() => feedbackNext(), 10000);
+		const feedbackTimerStart = (elements) => {
+			if (elements[0].isIntersecting && elements[0].target.classList.contains('timerOff')) {
+				feedbackTimer = setInterval(() => feedbackNext(), 10000);
+				elements[0].target.classList.remove('timerOff');
+			}
+		}
+
+		let feedbackTimer;
 
 		$('.feedback__prev').on('click', () => feedbackPrev());
 
 		$('.feedback__next').on('click', () => feedbackNext());
 
 		$('.feedback__box').on('click', () => feedbackTimerNew());
+
+		const sliderObserver = new IntersectionObserver(feedbackTimerStart, { threshold: [0.4] });
+
+		sliderObserver.observe(document.querySelector('.feedback'));
 	}
 })
