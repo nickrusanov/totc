@@ -1,7 +1,6 @@
 import $ from 'jquery';
 
 $(window).on('load', function () {
-
 	// MENU
 
 	const menuClose = () => {
@@ -40,6 +39,7 @@ $(window).on('load', function () {
 	if (window.innerWidth < 992) {
 		$('.nav__inner').addClass('nav__inner--animation');
 	}
+
 
 	// DARKMODE SWITCH
 

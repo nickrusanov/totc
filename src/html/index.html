@@ -7,73 +7,9 @@
 })
 
 <body class="home" id="top">
-	<style type="text/css">
-		@keyframes preload {
-			from {
-				transform: rotate(-45deg);
-			}
+	@@include('./components/preload.html')
 
-			to {
-				transform: rotate(315deg);
-			}
-		}
-
-		.preloader {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: column;
-			gap: 5px;
-			width: 100%;
-			height: 100vh;
-
-			position: fixed;
-			top: 0;
-			left: 0;
-			z-index: 1000;
-			opacity: 1;
-
-			background-color: white;
-
-			transition: all .4s ease;
-		}
-
-		.preloader--hide {
-			opacity: 0;
-			z-index: -1;
-			pointer-events: none;
-		}
-
-		.preloader img {
-			display: block;
-			width: 40px;
-			transform-origin: center;
-
-			opacity: 0.8;
-
-			animation: preload 1s ease 0s infinite;
-		}
-	</style>
-
-	<div class="preloader">
-		<img src="./img/loading.png" alt="loading">
-	</div>
-
-	<script type="text/javascript">
-		window.onload = function () {
-			document.querySelector('.preloader').classList.add('preloader--hide');
-		}
-	</script>
-
-	<noscript>
-		<style>
-			.preloader {
-				display: none !important;
-			}
-		</style>
-	</noscript>
-
-	@@include('./components/header.html')
+	@@include('./components/header.html', {"page": "home"})
 
 	<main class="main">
 		<section class="seller">
@@ -423,18 +359,19 @@
 							где и когда им удобно.</p>
 
 						<div class="features__links">
-							<a class="brand-link features__brand-link hidden" href="#">
+							<a class="brand-link features__brand-link hidden" href="https://www.apple.com/ru/app-store/" target="_blank">
 								<picture>
 									<source srcset="./img/apple.webp" type="image/webp">
 									<img class="brand-link__img" src="./img/apple.png" alt="apple">
 								</picture>
+
 								<div class="brand-link__text-box">
 									<p class="brand-link__text">Загрузите в</p>
 									<p class="brand-link__name">App Store</p>
 								</div>
 							</a>
 
-							<a class="brand-link features__brand-link hidden" href="#">
+							<a class="brand-link features__brand-link hidden" href="https://play.google.com/store/apps" target="_blank">
 								<picture>
 									<source srcset="./img/google.webp" type="image/webp">
 									<img class="brand-link__img" src="./img/google.png" alt="google">
@@ -688,7 +625,7 @@
 							всё попробовать и принять решение.
 						</p>
 
-						<button class="try__btn hidden">Начать сейчас</button>
+						<a class="try__btn hidden" href="login.html">Начать сейчас</a>
 					</div>
 
 					<div class="try__img-wrapper hidden">
@@ -772,10 +709,12 @@
 				<p class="modal__title-2 title-2">Напишите вопрос и мы свяжемся с Вами</p>
 
 				<form class="modal__form" action="#">
-					<input class="modal__input" type="text" placeholder="Укажите ваше имя" name="consultation-name" required>
-					<input class="modal__input phone" type="tel" placeholder="Укажите ваш телефон" name="consultation-phone" required>
-					<textarea class="modal__textarea" name="consultation-message" placeholder="Напишите сообщение"
-						required></textarea>
+					<input class="input modal__input" type="text" placeholder="Укажите ваше имя" name="consultation-name"
+						required="required">
+					<input class="input modal__input phone" type="tel" placeholder="Укажите ваш телефон" name="consultation-phone"
+						required="required">
+					<textarea class="textarea modal__textarea" name="consultation-message" placeholder="Напишите сообщение"
+						required="required"></textarea>
 					<button class="modal__send" type="submit">Отправить</button>
 				</form>
 
@@ -795,9 +734,10 @@
 				<p class="modal__title-2 title-2">Оставить отзыв</p>
 
 				<form class="modal__form" action="#">
-					<input class="modal__input" type="text" placeholder="Укажите ваше имя" name="review-name" required>
-					<input class="modal__input" type="email" placeholder="Укажите ваш email" name="review-email" required>
-					<textarea class="modal__textarea" name="review-message" placeholder="Напишите отзыв" required></textarea>
+					<input class="input modal__input" type="text" placeholder="Укажите ваше имя" name="review-name" required="required">
+					<input class="input modal__input" type="email" placeholder="Укажите ваш email" name="review-email"
+						required="required">
+					<textarea class="textarea modal__textarea" name="review-message" placeholder="Напишите отзыв" required></textarea>
 					<button class="modal__send" type="submit">Отправить</button>
 				</form>
 

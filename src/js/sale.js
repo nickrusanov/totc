@@ -1,8 +1,7 @@
 import $ from 'jquery';
 
 $(window).on('load', function () {
-	if ($('.sale__box')) {
-
+	if ($('.sale').length !== 0) {
 		// COUNTDOWN
 
 		let deadline;
@@ -41,6 +40,7 @@ $(window).on('load', function () {
 		}
 
 		initCountdown();
+
 
 		// CLOSE 
 

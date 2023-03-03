@@ -1,3 +1,10 @@
+.home {
+	.container {
+		max-width: 1565px;
+		padding: 0 50px 0 15px;
+	}
+}
+
 .seller {
 	margin-bottom: var(--margin-section);
 
@@ -8,10 +15,6 @@
 	background-color: var(--color-header-bg);
 	border-bottom-left-radius: 960px 120px;
 	border-bottom-right-radius: 960px 120px;
-
-	&--padding {
-		padding-top: 80px;
-	}
 
 	&__inner {
 		min-height: calc(100vh - 80px);
@@ -1017,7 +1020,7 @@
 
 		&.hidden {
 			opacity: 0;
-			transform: scale(.8)
+			transform: scale(0.8);
 		}
 	}
 
@@ -1036,10 +1039,10 @@
 		&:hover {
 			background-color: var(--color-btn-bg--hover);
 		}
-		
+
 		&.hidden {
 			transform: scale(0);
-		}	
+		}
 	}
 
 	&__tag-img {
@@ -1066,7 +1069,7 @@
 
 		&.hidden {
 			transform: scale(0);
-		}	
+		}
 	}
 
 	&__link {
@@ -1301,6 +1304,11 @@
 }
 
 @include lg {
+	.home .container {
+		max-width: 1530px;
+		padding: 0 15px;
+	}
+
 	.seller__inner {
 		min-height: auto;
 	}

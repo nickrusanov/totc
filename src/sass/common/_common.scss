@@ -44,6 +44,8 @@
 	--color-btn-text: var(--color-brand);
 	--color-btn-text--hover: var(--color-primary);
 	--color-btn-close: var(--color-secondary-light);
+	--color-btn-box: rgba(var(--color-brand-rgb), 0.6);
+	--color-btn-box--hover: rgba(var(--color-brand-rgb), 0.3);
 
 	--color-sale-text: var(--color-primary);
 
@@ -63,7 +65,7 @@
 
 	--color-footer-bg: var(--color-grey);
 	--color-footer-text: var(--color-primary);
-	--color-footer-text--hover: var(--color-brand);
+	--color-footer-text--hover: var(--color-accent);
 
 	// VAR
 	--margin-section: 100px;
@@ -111,6 +113,8 @@
 	--color-btn-text: var(--color-brand--darkmode);
 	--color-btn-text--hover: var(--color-primary--darkmode);
 	--color-btn-close: var(--color-secondary-light--darkmode);
+	--color-btn-box: rgba(var(--color-brand-rgb--darkmode), 0.6);
+	--color-btn-box--hover: rgba(var(--color-brand-rgb--darkmode), 0.3);
 
 	--color-sale-text: var(--color-primary--darkmode);
 
@@ -154,8 +158,8 @@ main {
 }
 
 .container {
-	max-width: 1565px;
-	padding: 0 50px 0 15px;
+	max-width: 1530px;
+	padding: 0 15px;
 	margin: 0 auto;
 }
 
@@ -234,6 +238,10 @@ main {
 
 .pinned {
 	overflow: hidden;
+}
+
+.header-padding {
+	padding-top: 80px;
 }
 
 .darkmode .brand-link:hover {
@@ -376,14 +384,6 @@ main {
 		gap: 30px;
 	}
 
-	&__input,
-	&__textarea {
-		padding: 14px 20px;
-
-		border-radius: 10px;
-		border: 1px solid var(--color-btn-bg);
-	}
-
 	&__textarea {
 		min-height: 200px;
 		resize: none;
@@ -414,6 +414,41 @@ main {
 	&__container {
 		margin: 0 auto;
 		max-width: 800px;
+	}
+}
+
+.input,
+.textarea,
+.select,
+.date {
+	width: 100%;
+	padding: 14px 20px;
+
+	font: 1rem/1.6 $font-primary;
+
+	border-radius: 10px;
+	border: 1px solid var(--color-btn-bg);
+
+	&:hover,
+	&:focus {
+		outline: 1px solid var(--color-btn-bg);
+	}
+
+	&::placeholder {
+		font: 1rem/1.6 $font-primary;
+		color: var(--color-placeholder);
+	}
+}
+
+.select {
+	appearance: none;
+
+	color: var(--color-placeholder);
+
+	background-color: var(--color-bg);
+
+	&--selected {
+		color: var(--color-text);
 	}
 }
 
@@ -450,11 +485,6 @@ main {
 	.title-1 {
 		line-height: 1.2;
 	}
-
-	.container {
-		max-width: 1530px;
-		padding: 0 15px;
-	}
 }
 
 @include media(900px) {
@@ -484,6 +514,18 @@ main {
 		--margin-section: 0;
 		--margin-block: 30px;
 		--margin-el: 20px;
+	}
+
+	.date,
+	.input,
+	.select,
+	.textarea {
+		padding: 10px 12px;
+	}
+
+	.modal__send {
+		padding: 15px;
+		max-width: none;
 	}
 }
 
