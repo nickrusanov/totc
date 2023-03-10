@@ -117,13 +117,37 @@ $(window).on('load', function () {
 	const darkmodeInit = () => {
 		switch (sessionStorage.getItem('theme')) {
 			case 'dark':
+				$('.header__darkmode-svg').css('transition', 'none');
+				$('.header__darkmode-img').addClass('header__darkmode-img--moveless');
+
 				darkmodeOn();
+				
+				setTimeout(() => {
+					$('.header__darkmode-svg').css('transition', '');
+					$('.header__darkmode-img').removeClass('header__darkmode-img--moveless');
+				}, 200);
 				break;
 			case 'light':
 				darkmodeOff();
 				break;
 			default:
-				systemThemeOn();
+				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					$('.header__darkmode-svg').css('transition', 'none');
+					$('.header__darkmode-img').addClass('header__darkmode-img--moveless');
+
+					darkmodeClassOn();
+
+					setTimeout(() => {
+						$('.header__darkmode-svg').css('transition', '');
+						$('.header__darkmode-img').removeClass('header__darkmode-img--moveless');
+					}, 200);
+				}
+
+				$('.subnav__btn')[0].classList.add('subnav__btn--active');
+				$('.subnav__btn')[1].classList.remove('subnav__btn--active');
+				$('.subnav__btn')[2].classList.remove('subnav__btn--active');
+
+				sessionStorage.setItem('theme', 'system');
 		}
 
 		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', systemThemeOn)

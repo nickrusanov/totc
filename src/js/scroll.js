@@ -1,10 +1,22 @@
 import $ from 'jquery'
 
 $(window).on('load', function () {
-	// HEADER 
+	// HEADER
 
 	const headerChange = () => {
-		if (window.scrollY > 200) {
+		if ($('.home').length !== 0) {
+			if (window.scrollY > 200) {
+				$('.header').addClass('header--fixed');
+				$('.main').addClass('header-padding');
+			} else {
+				$('.header').removeClass('header--fixed');
+				$('.main').removeClass('header-padding');
+			}
+
+			window.scrollY > window.innerHeight
+				? $('.header').addClass('header--animation')
+				: $('.header').removeClass('header--animation');
+		} else if (window.scrollY > 0) {
 			$('.header').addClass('header--fixed');
 			$('.main').addClass('header-padding');
 		} else {
@@ -12,9 +24,6 @@ $(window).on('load', function () {
 			$('.main').removeClass('header-padding');
 		}
 
-		window.scrollY > window.innerHeight
-			? $('.header').addClass('header--animation')
-			: $('.header').removeClass('header--animation');
 	}
 
 	if ($('.side-nav').length !== 0) {

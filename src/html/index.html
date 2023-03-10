@@ -2,6 +2,7 @@
 <html lang="ru">
 
 @@include('./components/head.html', {
+"page": "home",
 "title": "Главная | TOTC",
 "description": "TOTC — современная платформа, созданная для интерактивного обучения."
 })
@@ -11,9 +12,9 @@
 
 	@@include('./components/header.html', {"page": "home"})
 
-	<main class="main">
+	<main class="main home__main">
 		<section class="seller">
-			<div class="container">
+			<div class="container container--padding">
 				<div class="seller__inner">
 					<div class="seller__content">
 						<div class="seller__content-inner">
@@ -123,7 +124,7 @@
 		</section>
 
 		<section class="about" id="about">
-			<div class="container">
+			<div class="container container--padding">
 				<div class="about__box">
 					<div class="about__content">
 						<h2 class="title-2 about__title-2 hidden">Что такое <strong>TOTC?</strong></h2>
@@ -187,7 +188,7 @@
 		</section>
 
 		<section class="clients" id="clients">
-			<div class="container">
+			<div class="container container--padding">
 				<div class="clients__inner">
 					<div class="brand-slider hidden">
 						<div class="brand-slider__list">
@@ -303,7 +304,7 @@
 		</section>
 
 		<section class="features" id="features">
-			<div class="container">
+			<div class="container container--padding">
 				<h2 class="title-2 features__title-2 hidden">Наши <strong>особенности</strong></h2>
 
 				<div class="features__content">
@@ -419,7 +420,7 @@
 		</section>
 
 		<section class="feedback timerOff" id="feedback">
-			<div class="container">
+			<div class="container container--padding">
 				<div class="feedback__inner">
 					<div class="feedback__content">
 						<h2 class="title-2 feedback__title-2 hidden">Отзывы</h2>
@@ -523,7 +524,7 @@
 		</section>
 
 		<section class="blog-preview" id="blog-preview">
-			<div class="container">
+			<div class="container container--padding">
 				<h2 class="title-2 blog-preview__title-2 hidden">Последние <strong>статьи</strong></h2>
 
 				<div class="blog-preview__inner">
@@ -614,7 +615,7 @@
 		</section>
 
 		<section class="try" id="try">
-			<div class="container">
+			<div class="container container--padding">
 				<div class="try__inner">
 					<div class="try__content">
 						<h2 class="title-2 try__title-2 hidden">
@@ -716,6 +717,12 @@
 						required="required">
 					<textarea class="textarea modal__textarea" name="consultation-message" placeholder="Напишите сообщение"
 						required="required"></textarea>
+
+					<p class="modal__warning">
+						Нажимая кнопку, я принимаю условия пользовательского соглашения и даю согласие на обработку персональных
+						данных.
+					</p>
+
 					<button class="modal__send" type="submit">Отправить</button>
 				</form>
 
@@ -741,6 +748,12 @@
 						required="required">
 					<textarea class="textarea modal__textarea" name="review-message" placeholder="Напишите отзыв"
 						required></textarea>
+
+					<p class="modal__warning">
+						Нажимая кнопку, я принимаю условия пользовательского соглашения и даю согласие на обработку персональных
+						данных.
+					</p>
+
 					<button class="modal__send" type="submit">Отправить</button>
 				</form>
 

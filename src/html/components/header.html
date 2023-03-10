@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header @@if (context.page === 'home') {header--shift}">
 	<div class="container">
 		<div class="header__inner">
 			<a class="header__logo-link" href="index.html">
@@ -16,7 +16,7 @@
 					<p class="nav__title">МЕНЮ</p>
 					<ul class="nav__list">
 						<li class="nav__item">
-							<a class="nav__link @@if (context.page === 'home') {nav__link--active}" href="#">Главная</a>
+							<a class="nav__link @@if (context.page === 'home') {nav__link--active}" href="index.html">Главная</a>
 						</li>
 
 						<li class="nav__item nav__item--submenu">
@@ -56,7 +56,7 @@
 						</li>
 
 						<li class="nav__item">
-							<a class="nav__link" href="#">Тарифы</a>
+							<a class="nav__link @@if (context.page === 'tariffs') {nav__link--active}" href="tariffs.html">Тарифы</a>
 						</li>
 
 						<li class="nav__item">

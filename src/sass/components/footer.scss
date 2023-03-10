@@ -63,7 +63,7 @@
 		color: var(--color-footer-text);
 
 		&:hover {
-			color: var(--color-footer-text--hover);
+			text-decoration: underline var(--color-footer-text);
 		}
 	}
 
@@ -71,6 +71,7 @@
 		display: flex;
 		align-items: center;
 		gap: 12px;
+		padding: 8px 0;
 	}
 
 	&__text {
@@ -93,8 +94,15 @@
 		gap: 20px;
 	}
 
+	&__socials-link {
+		height: 32px;
+		min-height: 32px;
+		display: flex;
+		align-items: center;
+	}
+
 	&__socials-svg {
-		min-width: 40px;
+		@extend %trans;
 
 		path {
 			@extend %trans;
@@ -103,9 +111,7 @@
 		}
 
 		&:hover {
-			path {
-				fill: var(--color-footer-text--hover);
-			}
+			transform: scale(1.15);
 		}
 	}
 
@@ -125,7 +131,7 @@
 
 		background-color: var(--color-bg);
 		border-radius: 10px;
-		border: 3px solid var(--color-btn-bg);
+		border: 2px solid var(--color-btn-bg);
 
 		&::placeholder {
 			font: 0.625rem/1.5 $font-primary;
@@ -219,13 +225,9 @@
 		}
 
 		&--active {
-			color: var(--color-footer-text--hover);
-
 			&::after {
 				transform: rotate(180deg) translateY(-4px);
 				transform-origin: top;
-
-				border-color: var(--color-footer-text--hover) transparent transparent transparent;
 			}
 		}
 	}

@@ -34,6 +34,8 @@
 
 	--color-text: var(--color-secondary-light);
 	--color-text-accent: var(--color-accent);
+	--color-text-special: var(--color-secondary);
+	--color-text-special--hover: var(--color-brand);
 	--color-title: var(--color-secondary);
 	--color-title-accent: var(--color-brand-light);
 
@@ -46,6 +48,8 @@
 	--color-btn-close: var(--color-secondary-light);
 	--color-btn-box: rgba(var(--color-brand-rgb), 0.6);
 	--color-btn-box--hover: rgba(var(--color-brand-rgb), 0.3);
+	--color-btn-secondary-bg: var(--color-secondary);
+	--color-btn-secondary-text: var(--color-primary);
 
 	--color-sale-text: var(--color-primary);
 
@@ -60,6 +64,8 @@
 	--color-seller-decor-shadow: rgba(var(--color-primary-rgb), 0.5);
 
 	--color-placeholder: rgba(var(--color-secondary-light-rgb), 0.6);
+	--color-border: rgba(var(--color-secondary-light-rgb), 0.4);
+	--color-table--hover: rgba(var(--color-brand-rgb), 0.15);
 
 	--color-shadow: rgba(0, 0, 0, 0.25);
 
@@ -104,6 +110,8 @@
 
 	--color-text: var(--color-secondary-light--darkmode);
 	--color-text-accent: var(--color-accent--darkmode);
+	--color-text-special: var(--color-secondary--darkmode);
+	--color-text-special--hover: var(--color-brand--darkmode);
 	--color-title: var(--color-secondary--darkmode);
 
 	--color-bg: var(--color-primary--darkmode);
@@ -115,6 +123,8 @@
 	--color-btn-close: var(--color-secondary-light--darkmode);
 	--color-btn-box: rgba(var(--color-brand-rgb--darkmode), 0.6);
 	--color-btn-box--hover: rgba(var(--color-brand-rgb--darkmode), 0.3);
+	--color-btn-secondary-bg: var(--color-secondary--darkmode);
+	--color-btn-secondary-text: var(--color-primary--darkmode);
 
 	--color-sale-text: var(--color-primary--darkmode);
 
@@ -129,6 +139,8 @@
 	--color-seller-decor-shadow: rgba(var(--color-primary-rgb--darkmode), 0.5);
 
 	--color-placeholder: rgba(var(--color-secondary-light-rgb--darkmode), 0.6);
+	--color-border: rgba(var(--color-secondary-light-rgb--darkmode), 0.4);
+	--color-table--hover: rgba(var(--color-brand-rgb--darkmode), 0.15);
 
 	--color-shadow: rgba(255, 255, 255, 0.3);
 
@@ -161,6 +173,19 @@ main {
 	max-width: 1530px;
 	padding: 0 15px;
 	margin: 0 auto;
+
+	&--w1000 {
+		max-width: 1030px;
+	}
+
+	&--w1400 {
+		max-width: 1430px;
+	}
+
+	&--padding {
+		max-width: 1565px;
+		padding: 0 50px 0 15px;
+	}
 }
 
 .title-1 {
@@ -174,6 +199,10 @@ main {
 	&.hidden {
 		opacity: 0;
 		transform: translateY(100px);
+	}
+
+	strong {
+		color: var(--color-title-accent);
 	}
 }
 
@@ -232,7 +261,7 @@ main {
 
 	&.hidden {
 		opacity: 0;
-		transform: translateY(50px);
+		transform: translateY(30%);
 	}
 }
 
@@ -376,6 +405,11 @@ main {
 
 	&__title-2 {
 		margin-bottom: 40px;
+	}
+
+	&__warning {
+		font-size: .75rem;
+		color: var(--color-placeholder);
 	}
 
 	&__form {
