@@ -1,4 +1,4 @@
-.main {
+.tariffs-page {
 	--title-margin: 60px;
 }
 
@@ -21,7 +21,7 @@
 	}
 
 	&__box {
-		@extend %trans;
+		@extend %appear;
 
 		display: flex;
 		flex-direction: column;
@@ -35,10 +35,15 @@
 
 		border: 2px solid var(--color-text-special);
 		border-radius: 40px;
-		box-shadow: 0 0 10px var(--color-shadow);
+
+		&.hidden {
+			opacity: 0;
+			transform: translateY(50px);
+		}
 
 		&:hover {
 			border-color: var(--color-text-special--hover);
+			box-shadow: 0 0 10px var(--color-shadow);
 
 			.tariffs__link-btn {
 				background-color: var(--color-text-special--hover);
@@ -200,7 +205,14 @@
 	}
 
 	&__link-wrapper {
+		@extend %appear;
+
 		text-align: center;
+
+		&.hidden {
+			opacity: 0;
+			transform: translateY(50%);
+		}
 	}
 
 	&__link {
@@ -227,7 +239,8 @@
 	}
 
 	&__item {
-		@extend %trans;
+		@extend %appear;
+		@extend %box-appear;
 
 		position: relative;
 
@@ -331,6 +344,10 @@
 	}
 
 	&__table-wrapper {
+		@extend %appear;
+		@extend %box-appear;
+
+		margin-bottom: var(--margin-el);
 		overflow: auto;
 	}
 
@@ -529,6 +546,20 @@
 		line-height: 1.4;
 		color: var(--color-text-special);
 	}
+
+	&__text {
+		text-align: center;
+	}
+
+	&__link {
+		@extend %trans;
+
+		color: var(--color-title);
+
+		&:hover {
+			color: var(--color-title-accent);
+		}
+	}
 }
 
 /* MEDIA
@@ -559,7 +590,7 @@
 	}
 
 	.compare__table-subtitle-flex p {
-		font-size: .75rem;
+		font-size: 0.75rem;
 	}
 }
 
@@ -569,7 +600,7 @@
 		border-radius: 30px;
 	}
 
-	.main {
+	.tariffs-page {
 		--title-margin: 40px;
 	}
 
@@ -583,7 +614,7 @@
 }
 
 @include sm {
-	.main {
+	.tariffs-page {
 		--title-margin: 30px;
 	}
 

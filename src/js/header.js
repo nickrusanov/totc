@@ -17,29 +17,30 @@ $(window).on('load', function () {
 		$('body').toggleClass('pinned');
 	}
 
-	$('.header__hamburger').click(menuToggle);
+	if ($('.header').length !== 0) {
+		$('.header__hamburger').click(menuToggle);
 
-	$('.nav__item--submenu').click((event) => {
-		$('.subnav').each((i, el) => {
-			if (event.target.contains(el)) {
-				el.classList.toggle('subnav--active');
-			}
+		$('.nav__item--submenu').click((event) => {
+			$('.subnav').each((i, el) => {
+				if (event.target.contains(el)) {
+					el.classList.toggle('subnav--active');
+				}
+			})
+			event.target.classList.toggle('nav__item--submenu-active')
 		})
-		event.target.classList.toggle('nav__item--submenu-active')
-	})
 
-	window.addEventListener('orientationchange', menuClose);
+		window.addEventListener('orientationchange', menuClose);
 
-	window.addEventListener('resize', () => {
-		window.innerWidth < 992
-			? $('.nav__inner').addClass('nav__inner--animation')
-			: $('.nav__inner').removeClass('nav__inner--animation');
-	})
+		window.addEventListener('resize', () => {
+			window.innerWidth < 992
+				? $('.nav__inner').addClass('nav__inner--animation')
+				: $('.nav__inner').removeClass('nav__inner--animation');
+		})
 
-	if (window.innerWidth < 992) {
-		$('.nav__inner').addClass('nav__inner--animation');
+		if (window.innerWidth < 992) {
+			$('.nav__inner').addClass('nav__inner--animation');
+		}
 	}
-
 
 	// DARKMODE SWITCH
 
@@ -121,7 +122,7 @@ $(window).on('load', function () {
 				$('.header__darkmode-img').addClass('header__darkmode-img--moveless');
 
 				darkmodeOn();
-				
+
 				setTimeout(() => {
 					$('.header__darkmode-svg').css('transition', '');
 					$('.header__darkmode-img').removeClass('header__darkmode-img--moveless');

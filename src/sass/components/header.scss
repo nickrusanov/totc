@@ -211,7 +211,7 @@
 		position: relative;
 
 		&:hover .nav__link {
-			text-shadow: 0 0 12px var(--color-header-text);
+			text-shadow: 0 0 12px #affcff;
 		}
 
 		&:hover .nav__link--active {
@@ -463,6 +463,10 @@
 		gap: 0;
 	}
 
+	.nav:hover .nav__link {
+		text-shadow: none;
+	}
+
 	.nav__item {
 		cursor: pointer;
 
@@ -525,6 +529,7 @@
 	.nav__link {
 		display: inline-block;
 		padding: 10px 0;
+		width: 100%;
 
 		font-size: 28px;
 		font-weight: 400;

@@ -45,8 +45,7 @@
 		@extend %appear;
 
 		&.hidden {
-			opacity: 0;
-			transform: translateY(50px);
+			@extend %box-appear;
 		}
 	}
 
@@ -1395,10 +1394,6 @@
 
 	.seller__box {
 		display: none;
-	}
-
-	.seller {
-		border-radius: 0;
 	}
 
 	.seller__text {

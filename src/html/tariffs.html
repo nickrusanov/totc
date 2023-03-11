@@ -6,7 +6,7 @@
 "description": ""
 })
 
-<body>
+<body class="tariffs-page">
 	@@include('./components/preload.html')
 
 	@@include('./components/header.html', {"page": "tariffs"})
@@ -14,10 +14,10 @@
 	<main class="main">
 		<section class="tariffs">
 			<div class="container container--w1400">
-				<h1 class="title-1 tariffs__title-1"><strong>Тарифы</strong></h1>
+				<h1 class="title-1 tariffs__title-1 hidden"><strong>Тарифы</strong></h1>
 
 				<div class="tariffs__inner">
-					<div class="tariffs__box">
+					<div class="tariffs__box hidden">
 						<div>
 							<h4 class="title-4 tariffs__title-4">Пробный</h4>
 
@@ -35,7 +35,7 @@
 					</div>
 
 
-					<div class="tariffs__box">
+					<div class="tariffs__box hidden">
 						<div>
 							<h4 class="title-4 tariffs__title-4">Оптимальный</h4>
 
@@ -97,7 +97,7 @@
 					</div>
 
 
-					<div class="tariffs__box">
+					<div class="tariffs__box hidden">
 						<div>
 							<h4 class="title-4 tariffs__title-4">Особый</h4>
 
@@ -127,17 +127,17 @@
 				</div>
 			</div>
 
-			<div class="tariffs__link-wrapper">
+			<div class="tariffs__link-wrapper hidden">
 				<a class="tariffs__link" href="#compare">Сравнить тарифы</a>
 			</div>
 		</section>
 
 		<section class="faq">
 			<div class="container container--w1000">
-				<h2 class="title-2 faq__title-2">Вопросы и <strong>ответы</strong></h2>
+				<h2 class="title-2 faq__title-2 hidden">Вопросы и <strong>ответы</strong></h2>
 
 				<ul class="faq__list">
-					<li class="faq__item">
+					<li class="faq__item hidden">
 						<button class="faq__item-btn" type='button'>
 							<p class="faq__item-btn-text">Какие пользователи учитываются при расчёте тарифа?</p>
 
@@ -156,7 +156,7 @@
 						</p>
 					</li>
 
-					<li class="faq__item">
+					<li class="faq__item hidden">
 						<button class="faq__item-btn" type='button'>
 							<p class="faq__item-btn-text">
 								Что будет, если оплатим тариф на Х пользователей, а их станет больше?
@@ -178,7 +178,7 @@
 						</p>
 					</li>
 
-					<li class="faq__item">
+					<li class="faq__item hidden">
 						<button class="faq__item-btn" type='button'>
 							<p class="faq__item-btn-text">
 								Можно ли подписаться на платформу на более короткий срок?
@@ -198,7 +198,7 @@
 						</p>
 					</li>
 
-					<li class="faq__item">
+					<li class="faq__item hidden">
 						<button class="faq__item-btn" type='button'>
 							<p class="faq__item-btn-text">
 								Сотрудники смогут обучаться с телефона?
@@ -219,7 +219,7 @@
 						</p>
 					</li>
 
-					<li class="faq__item">
+					<li class="faq__item hidden">
 						<button class="faq__item-btn" type='button'>
 							<p class="faq__item-btn-text">
 								Через вашу платформу можно продавать свои курсы?
@@ -240,7 +240,7 @@
 						</p>
 					</li>
 
-					<li class="faq__item">
+					<li class="faq__item hidden">
 						<button class="faq__item-btn" type='button'>
 							<p class="faq__item-btn-text">
 								Можно ли перенести все купленные курсы с другой платформы?
@@ -262,7 +262,7 @@
 						</p>
 					</li>
 
-					<li class="faq__item">
+					<li class="faq__item hidden">
 						<button class="faq__item-btn" type='button'>
 							<p class="faq__item-btn-text">
 								Поможете ли вы правильно выстроить процесс обучения?
@@ -283,7 +283,7 @@
 						</p>
 					</li>
 
-					<li class="faq__item">
+					<li class="faq__item hidden">
 						<button class="faq__item-btn" type='button'>
 							<p class="faq__item-btn-text">
 								Как организовать обучение для разных филиалов?
@@ -305,7 +305,7 @@
 						</p>
 					</li>
 
-					<li class="faq__item">
+					<li class="faq__item hidden">
 						<button class="faq__item-btn" type='button'>
 							<p class="faq__item-btn-text">
 								Есть ли у вас коробочная версия?
@@ -325,7 +325,7 @@
 						</p>
 					</li>
 
-					<li class="faq__item">
+					<li class="faq__item hidden">
 						<button class="faq__item-btn" type='button'>
 							<p class="faq__item-btn-text">
 								Есть ли у вас инструменты для защиты персональных данных?
@@ -351,9 +351,9 @@
 
 		<section class="compare" id="compare">
 			<div class="container container--w1400">
-				<h2 class="title-2 compare__title-2">Сравнение <strong>тарифов</strong></h2>
+				<h2 class="title-2 compare__title-2 hidden">Сравнение <strong>тарифов</strong></h2>
 
-				<div class="compare__table-wrapper">
+				<div class="compare__table-wrapper hidden">
 					<table class="compare__table">
 						<tr class="compare__table-tariff">
 							<td></td>
@@ -1277,6 +1277,11 @@
 						</tr>
 					</table>
 				</div>
+
+				<p class="compare__text text hidden">
+					Не нашли нужного тарифа?
+					<a class="compare__link modal-btn" href="#calculation">Свяжитесь с нами.</a>
+				</p>
 			</div>
 		</section>
 	</main>

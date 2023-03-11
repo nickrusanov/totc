@@ -22,7 +22,6 @@
 	// COLORS LIGHTMODE SEMANTIC
 	--color-header-bg: var(--color-brand);
 	--color-header-text: var(--color-primary);
-	--color-header-text--hover: var(--color-accent);
 	--color-header-logo: var(--color-primary);
 	--color-header-btn--hover: var(--color-brand);
 	--color-header-btn-line: rgba(var(--color-primary-rgb), 0.5);
@@ -71,7 +70,6 @@
 
 	--color-footer-bg: var(--color-grey);
 	--color-footer-text: var(--color-primary);
-	--color-footer-text--hover: var(--color-accent);
 
 	// VAR
 	--margin-section: 100px;
@@ -99,7 +97,6 @@
 	// COLORS DARKMODE SEMANTIC
 	--color-header-bg: var(--color-brand--darkmode);
 	--color-header-text: var(--color-primary--darkmode);
-	--color-header-text--hover: var(--color-accent--darkmode);
 	--color-header-logo: var(--color-primary--darkmode);
 	--color-header-btn--hover: var(--color-brand--darkmode);
 	--color-header-btn-line: rgba(var(--color-primary-rgb--darkmode), 0.5);
@@ -109,10 +106,11 @@
 	--color-header-menu-bg: var(--color-primary--darkmode);
 
 	--color-text: var(--color-secondary-light--darkmode);
-	--color-text-accent: var(--color-accent--darkmode);
+	--color-text-accent: var(--color-primary--darkmode);
 	--color-text-special: var(--color-secondary--darkmode);
 	--color-text-special--hover: var(--color-brand--darkmode);
 	--color-title: var(--color-secondary--darkmode);
+	--color-title-accent: var(--color-brand-light--darkmode);
 
 	--color-bg: var(--color-primary--darkmode);
 
@@ -202,6 +200,8 @@ main {
 	}
 
 	strong {
+		@extend %trans;
+
 		color: var(--color-title-accent);
 	}
 }
@@ -455,6 +455,9 @@ main {
 .textarea,
 .select,
 .date {
+	@extend %appear;
+	@extend %box-appear;
+
 	width: 100%;
 	padding: 14px 20px;
 
