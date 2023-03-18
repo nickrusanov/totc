@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('./components/head.html', {
+"title": "Каталог | TOTC",
+"description": "TOTC — современная платформа, созданная для интерактивного обучения."
+})
+
+<body class="choice-page">
+	@@include('./components/preload.html')
+
+	@@include('./components/header.html')
+
+	<main class="main choice-page__main">
+		<div class="breadcrumbs choice-page__breadcrumbs">
+			<div class="container">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link" href="./index.html">
+							<svg class="breadcrumbs__link-svg" width="30" height="27" viewBox="0 0 30 27" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M11.5475 24.4564V16.6509H17.8518V24.4564C17.8518 25.315 18.561 26.0175 19.4278 26.0175H24.1561C25.0229 26.0175 25.7321 25.315 25.7321 24.4564V13.5288H28.4115C29.1365 13.5288 29.4832 12.6389 28.9316 12.1706L15.7556 0.41558C15.1567 -0.115191 14.2426 -0.115191 13.6437 0.41558L0.467672 12.1706C-0.068193 12.6389 0.262782 13.5288 0.987777 13.5288H3.6671V24.4564C3.6671 25.315 4.37634 26.0175 5.24318 26.0175H9.9714C10.8382 26.0175 11.5475 25.315 11.5475 24.4564Z" />
+							</svg>
+						</a>
+					</li>
+
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link" href="./courses.html">Курсы</a>
+					</li>
+
+					<li class="breadcrumbs__item">
+						<span class="breadcrumbs__link">Каталог</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<section class="choice">
+			<div class="container">
+				<h1 class="choice__title-1 title-1">Каталог <strong>курсов</strong></h1>
+
+				<form class="search choice__search" action="/choice.html">
+					<input class="search__input" type="search" name="keyword" placeholder="Какой курс вам нужен?">
+					<button class="search__send" type="submit">
+						<span class="search__send-text">Найти курс</span>
+
+						<svg class="search__send-svg" width="30" height="30" viewBox="0 0 30 30" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M27.6667 30L17.1667 19.5C16.3333 20.1667 15.375 20.6944 14.2917 21.0833C13.2083 21.4722 12.0556 21.6667 10.8333 21.6667C7.80556 21.6667 5.24333 20.6183 3.14667 18.5217C1.04889 16.4239 0 13.8611 0 10.8333C0 7.80556 1.04889 5.24278 3.14667 3.145C5.24333 1.04833 7.80556 0 10.8333 0C13.8611 0 16.4239 1.04833 18.5217 3.145C20.6183 5.24278 21.6667 7.80556 21.6667 10.8333C21.6667 12.0556 21.4722 13.2083 21.0833 14.2917C20.6944 15.375 20.1667 16.3333 19.5 17.1667L30 27.6667L27.6667 30ZM10.8333 18.3333C12.9167 18.3333 14.6878 17.6044 16.1467 16.1467C17.6044 14.6878 18.3333 12.9167 18.3333 10.8333C18.3333 8.75 17.6044 6.97889 16.1467 5.52C14.6878 4.06222 12.9167 3.33333 10.8333 3.33333C8.75 3.33333 6.97889 4.06222 5.52 5.52C4.06222 6.97889 3.33333 8.75 3.33333 10.8333C3.33333 12.9167 4.06222 14.6878 5.52 16.1467C6.97889 17.6044 8.75 18.3333 10.8333 18.3333Z" />
+						</svg>
+					</button>
+				</form>
+
+				<div class="category__wrapper">
+					<div class="category choice__category">
+						<p class="title-4 choice__title-4 choice__title-4--tablet">Категория</p>
+
+						<input class="category__input" type="radio" name="profession" value="all" id="profession-all"
+							form="choice__form" checked>
+						<label class="category__label" for="profession-all">Все</label>
+
+						<input class="category__input" type="radio" name="profession" value="programming"
+							id="profession-programming" form="choice__form">
+						<label class="category__label" for="profession-programming">Программирование</label>
+
+						<input class="category__input" type="radio" name="profession" value="data" id="profession-data"
+							form="choice__form">
+						<label class="category__label" for="profession-data">Анализ данных</label>
+
+						<input class="category__input" type="radio" name="profession" value="marketing" id="profession-marketing"
+							form="choice__form">
+						<label class="category__label" for="profession-marketing">Маркетинг</label>
+
+						<input class="category__input" type="radio" name="profession" value="management" id="profession-management"
+							form="choice__form">
+						<label class="category__label" for="profession-management">Управление</label>
+
+						<input class="category__input" type="radio" name="profession" value="design" id="profession-design"
+							form="choice__form">
+						<label class="category__label" for="profession-design">Дизайн</label>
+
+						<input class="category__input" type="radio" name="profession" value="english" id="profession-english"
+							form="choice__form">
+						<label class="category__label" for="profession-english">Английский язык</label>
+					</div>
+				</div>
+
+				<div class="choice__box">
+					<aside class="choice__aside">
+						<div class="choice__aside-inner">
+							<button class="choice__aside-close" type="btn">
+								<svg class="choice__aside-close-svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M0.923078 2.76923C0.413277 2.25943 0.413277 1.43288 0.923078 0.923077V0.923077C1.43288 0.413276 2.25943 0.413275 2.76923 0.923077L23.0769 21.2308C23.5867 21.7406 23.5867 22.5671 23.0769 23.0769V23.0769C22.5671 23.5867 21.7406 23.5867 21.2308 23.0769L0.923078 2.76923Z" />
+									<path
+										d="M21.2308 0.923077C21.7406 0.413276 22.5671 0.413276 23.0769 0.923078V0.923078C23.5867 1.43288 23.5867 2.25943 23.0769 2.76923L2.76923 23.0769C2.25943 23.5867 1.43288 23.5867 0.923078 23.0769V23.0769C0.413276 22.5671 0.413276 21.7406 0.923077 21.2308L21.2308 0.923077Z" />
+								</svg>
+							</button>
+
+							<form class="choice__form" action="/choice.html" id="choice__form">
+								<div class="choice__filter">
+									<p class="choice__title-4 title-4">Стоимость</p>
+
+									<input class="checkbox choice__checkbox" type="checkbox" name="price" value="free" id="price-free">
+									<label class="checkbox-label choice__checkbox-label" for="price-free">
+										Бесплатное
+									</label>
+
+									<input class="checkbox choice__checkbox" type="checkbox" name="price" value="paid" id="price-paid">
+									<label class="checkbox-label choice__checkbox-label" for="price-paid">
+										Платное
+									</label>
+								</div>
+
+								<div class="choice__filter">
+									<p class="choice__title-4 title-4">Длительность</p>
+
+									<input class="checkbox choice__checkbox" type="checkbox" name="duration" value="3m" id="duration-3m">
+									<label class="checkbox-label choice__checkbox-label" for="duration-3m">До 3 месяцев</label>
+
+									<input class="checkbox choice__checkbox" type="checkbox" name="duration" value="3m-6m"
+										id="duration-3m-6m">
+									<label class="checkbox-label choice__checkbox-label" for="duration-3m-6m">3-6 месяцев</label>
+
+									<input class="checkbox choice__checkbox" type="checkbox" name="duration" value="6m-12m"
+										id="duration-6m-12m">
+									<label class="checkbox-label choice__checkbox-label" for="duration-6m-12m">6-12 месяцев</label>
+
+									<input class="checkbox choice__checkbox" type="checkbox" name="duration" value="12m"
+										id="duration-12m">
+									<label class="checkbox-label choice__checkbox-label" for="duration-12m">От 1 года</label>
+								</div>
+
+								<div class="choice__filter">
+									<p class="choice__title-4 title-4">Уровень</p>
+
+									<input class="checkbox choice__checkbox" type="checkbox" name="experience" value="newbie"
+										id="experience-newbie">
+									<label class="checkbox-label choice__checkbox-label" for="experience-newbie">Учёба с нуля</label>
+
+									<input class="checkbox choice__checkbox" type="checkbox" name="experience" value="skilled"
+										id="experience-skilled">
+									<label class="checkbox-label choice__checkbox-label" for="experience-skilled">С опытом</label>
+								</div>
+
+								<div class="choice__btn-box">
+									<button class="choice__send" type="submit">Подобрать</button>
+									<a class="choice__reset" href="./choice.html">Сброс</a>
+								</div>
+							</form>
+						</div>
+					</aside>
+
+					<div class="choice__content" id="choice__content">
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	@@include('./components/footer.html')
+
+	<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+	<script src="js/courses.js" type="text/babel"></script>
+	<script src="js/script.min.js"></script>
+</body>
+
+</html>

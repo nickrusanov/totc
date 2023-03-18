@@ -1,4 +1,4 @@
 import $ from 'jquery';
 import { Fancybox } from "@fancyapps/ui/dist/fancybox/fancybox.esm.js";
 
-Fancybox.bind("[data-fancybox]", {});
+Fancybox.bind("[data-fancybox]", {width: '100%'});

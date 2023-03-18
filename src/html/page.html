@@ -3,7 +3,7 @@
 
 @@include('./components/head.html', {
 "title": "",
-"description": ""
+"description": "TOTC — современная платформа, созданная для интерактивного обучения."
 })
 
 <body>
@@ -11,7 +11,28 @@
 
 	@@include('./components/header.html')
 
-	<main class="main"></main>
+	<main class="main">
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link" href="index.html">
+							<svg class="breadcrumbs__link-svg" width="30" height="27" viewBox="0 0 30 27" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M11.5475 24.4564V16.6509H17.8518V24.4564C17.8518 25.315 18.561 26.0175 19.4278 26.0175H24.1561C25.0229 26.0175 25.7321 25.315 25.7321 24.4564V13.5288H28.4115C29.1365 13.5288 29.4832 12.6389 28.9316 12.1706L15.7556 0.41558C15.1567 -0.115191 14.2426 -0.115191 13.6437 0.41558L0.467672 12.1706C-0.068193 12.6389 0.262782 13.5288 0.987777 13.5288H3.6671V24.4564C3.6671 25.315 4.37634 26.0175 5.24318 26.0175H9.9714C10.8382 26.0175 11.5475 25.315 11.5475 24.4564Z" />
+							</svg>
+						</a>
+					</li>
+
+					<li class="breadcrumbs__item">
+						<span class="breadcrumbs__link"></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</main>
 
 	@@include('./components/footer.html')
 

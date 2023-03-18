@@ -162,7 +162,7 @@
 /* MEDIA
 **************************************/
 
-@include media(1600px) {
+@include media('1600px') {
 	.footer__box-inner {
 		flex-direction: row;
 		align-items: center;
@@ -184,7 +184,19 @@
 	}
 }
 
-@include media(850px) {
+@include media('900px') {
+	.footer__input {
+		padding: 14px 16px;
+
+		font-size: .8rem;
+
+		&::placeholder {
+			font-size: .8rem;
+		}
+	}
+}
+
+@include media('850px') {
 	.footer__box-list {
 		flex-direction: column;
 	}
@@ -233,7 +245,7 @@
 	}
 }
 
-@include media(600px) {
+@include media('600px') {
 	.footer__box-inner {
 		justify-content: center;
 	}

@@ -1,2 +1,9 @@
 @import "./../../node_modules/slick-carousel/slick/slick.scss";
 @import "./../../node_modules/@fancyapps/ui/dist/fancybox/fancybox";
+
+.has-html5video .fancybox__content,
+.has-vimeo .fancybox__content,
+.has-youtube .fancybox__content {
+	width: 1280px;
+	height: 720px;
+}

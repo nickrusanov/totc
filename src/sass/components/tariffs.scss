@@ -3,12 +3,14 @@
 }
 
 .tariffs {
-	margin: 80px 0 var(--margin-block);
+	margin: 40px 0 var(--margin-block);
 
 	&__title-1 {
 		margin-bottom: var(--title-margin);
 
 		text-align: center;
+
+		color: var(--color-title);
 	}
 
 	&__inner {
@@ -620,6 +622,10 @@
 
 	.faq__item-text {
 		padding-right: 0;
+	}
+
+	.tariffs {
+		margin-top: 20px;
 	}
 }
 

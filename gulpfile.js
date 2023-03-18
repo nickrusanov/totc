@@ -13,6 +13,7 @@ import clear from './gulp/tasks/clear.js';
 import html from './gulp/tasks/html.js';
 import sass from './gulp/tasks/sass.js';
 import js from './gulp/tasks/js.js';
+import react from './gulp/tasks/react.js';
 import img from './gulp/tasks/img.js';
 import fonts from './gulp/tasks/fonts.js';
 
@@ -28,17 +29,18 @@ const watching = () => {
 	gulp.watch(path.html.watch, html).on('all', browserSync.reload)
 	gulp.watch(path.sass.watch, sass).on('all', browserSync.reload)
 	gulp.watch(path.js.watch, js).on('all', browserSync.reload)
+	gulp.watch(path.react.watch, react).on('all', browserSync.reload)
 	gulp.watch(path.img.watch, img).on('all', browserSync.reload)
 	gulp.watch(path.fonts.watch, fonts).on('all', browserSync.reload)
 }
 
 const build = gulp.series(
 	clear,
-	gulp.parallel(html, sass, js, img, fonts)
+	gulp.parallel(html, sass, js, react, img, fonts)
 )
 
 const dev = gulp.series(
-	gulp.parallel(html, sass, js, img, fonts),
+	gulp.parallel(html, sass, js, react, img, fonts),
 	gulp.parallel(server, watching)
 )
 
@@ -46,6 +48,7 @@ export { html }
 export { sass }
 export { clear }
 export { js }
+export { react }
 export { img }
 export { fonts }
 export { watching }

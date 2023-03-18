@@ -112,4 +112,48 @@ $(window).on('load', function () {
 			}
 		})
 	}
+
+
+	// COURSES
+
+	if ($('.courses').length !== 0) {
+		const completeWayShow = () => {
+			if ((window.scrollY + 650 >= $('.unleash__way-wrapper').offset().top)
+				&& window.scrollY + 550 <= $('.unleash__way-wrapper').offset().top + $('.unleash__way-wrapper').outerHeight()) {
+				const completeHeight = Math.round(window.scrollY - $('.unleash__way-wrapper').offset().top + 600);
+
+				document.querySelector('.unleash__way-wrapper')
+					.style.setProperty('--complete-height', completeHeight + 'px');
+
+				if (completeHeight > 0) {
+					$('.unleash__way-point')[0].classList.add('unleash__way-point--active');
+					$('.unleash__title-3')[0].classList.add('unleash__title-3--active');
+				} else {
+					$('.unleash__way-point')[0].classList.remove('unleash__way-point--active');
+					$('.unleash__title-3')[0].classList.remove('unleash__title-3--active');
+				}
+
+				if (completeHeight > 400) {
+					$('.unleash__way-point')[1].classList.add('unleash__way-point--active');
+					$('.unleash__title-3')[1].classList.add('unleash__title-3--active');
+				} else {
+					$('.unleash__way-point')[1].classList.remove('unleash__way-point--active');
+					$('.unleash__title-3')[1].classList.remove('unleash__title-3--active');
+				}
+
+				if (completeHeight > 815) {
+					$('.unleash__way-point')[2].classList.add('unleash__way-point--active');
+					$('.unleash__title-3')[2].classList.add('unleash__title-3--active');
+				} else {
+					$('.unleash__way-point')[2].classList.remove('unleash__way-point--active');
+					$('.unleash__title-3')[2].classList.remove('unleash__title-3--active');
+				}
+			}
+		}
+
+		completeWayShow();
+
+		window.addEventListener('scroll', completeWayShow);
+	}
 })
+

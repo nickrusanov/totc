@@ -1,1 +1,61 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="./css/style.min.css"><link rel="icon" href="./img/favicon.svg"><link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"><title>Страница не найдена | TOTC</title><meta name="description" content="Ссылка, по которой вы перешли, никуда не ведёт."></head><body><section class="not-found"><div class="container"><div class="not-found__inner"><div class="not-found__header"><a class="not-found__logo-link" href="index.html"><picture><source srcset="./img/logo.webp" type="image/webp"><img class="not-found__logo-img" src="./img/logo.png" alt="logo"></picture></a><p class="not-found__error-text">Ошибка 404</p></div><div class="not-found__content"><h1 class="title-1 not-found__title-1">Такой страницы нет</h1><p class="not-found__text">Ссылка, по которой вы перешли, никуда не ведет. Возможно, в ней была опечатка, или эта страница была удалена.</p><a class="not-found__link-btn" href="index.html">Перейти на главную</a></div><div class="not-found__footer"><a class="not-found__link" href="mailto:helpme@totc.ru">helpme@totc.ru</a> <a class="not-found__link" href="tel:+79452357832">+7 (945) 235-78-32</a></div></div></div></section><script src="js/script.min.js"></script></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="./css/style.min.css"><link rel="icon" href="./img/favicon.svg"><link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"><title>Страница не найдена | TOTC</title><meta name="description" content="Ссылка, по которой вы перешли, никуда не ведёт."></head><body><style type="text/css">@keyframes preload {
+		from {
+			transform: rotate(-45deg);
+		}
+
+		to {
+			transform: rotate(315deg);
+		}
+	}
+
+	.preloader {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 5px;
+		width: 100%;
+		height: 100vh;
+
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1000;
+		opacity: 1;
+
+		background-color: white;
+
+		transition: all .5s ease;
+	}
+
+	.preloader--hide {
+		opacity: 0;
+		z-index: -1;
+		pointer-events: none;
+	}
+
+	.preloader img {
+		display: block;
+		width: 40px;
+		transform-origin: center;
+
+		opacity: 0.8;
+
+		animation: preload 1s ease 0s infinite;
+	}</style><div class="preloader"><img src="./img/loading.png" alt="loading"></div><script type="text/javascript">window.onload = function () {
+		document.querySelector('.preloader').classList.add('preloader--hide');
+	}
+
+	switch (sessionStorage.getItem('theme')) {
+		case 'dark':
+			document.querySelector('.preloader').style.backgroundColor = '#262C2C';
+			break;
+		case 'light':
+			break;
+		default:
+			if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				document.querySelector('.preloader').style.backgroundColor = '#262C2C';
+			}
+	}</script><noscript><style>.preloader {
+			display: none !important;
+		}</style></noscript><section class="not-found"><div class="container"><div class="not-found__inner"><div class="not-found__header"><a class="not-found__logo-link" href="index.html"><picture><source srcset="./img/logo.webp" type="image/webp"><img class="not-found__logo-img" src="./img/logo.png" alt="logo"></picture></a><p class="not-found__error-text">Ошибка 404</p></div><div class="not-found__content"><h1 class="title-1 not-found__title-1">Такой страницы нет</h1><p class="not-found__text">Ссылка, по которой вы перешли, никуда не ведет. Возможно, в ней была опечатка, или эта страница была удалена.</p><a class="not-found__link-btn" href="index.html">Перейти на главную</a></div><div class="not-found__footer"><a class="not-found__link" href="mailto:helpme@totc.ru">helpme@totc.ru</a> <a class="not-found__link" href="tel:+79452357832">+7 (945) 235-78-32</a></div></div></div></section><script src="js/script.min.js"></script></body></html>

@@ -19,7 +19,13 @@ export default {
 	js: {
 		src: `${srcPath}/js/*.js`,
 		dist: `${distPath}/js`,
-		watch: `${srcPath}/js/**/*.js`
+		watch: `${srcPath}/js/*.js`
+	},
+
+	react: {
+		src: `${srcPath}/js/react/*.{js,json}`,
+		dist: `${distPath}/js`,
+		watch: `${srcPath}/js/react/*.{js,json}`
 	},
 
 	img: {

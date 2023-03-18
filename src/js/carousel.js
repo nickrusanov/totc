@@ -17,3 +17,18 @@ $(window).on('load', function () {
 		});
 	}
 })
+
+$(window).on('load', function () {
+	if ($('.history__list').length !== 0) {
+		$('.history__list').slick({
+			dots: false,
+			arrows: true,
+			infinite: true,
+			speed: 1000,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			prevArrow: '<button type="button" class="history__slick-prev"></button>',
+			nextArrow: '<button type="button" class="history__slick-next"></button>',
+		});
+	}
+})

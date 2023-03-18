@@ -82,52 +82,6 @@
 		}
 	}
 
-	&__play-box {
-		position: relative;
-
-		@extend %appear;
-
-		&.hidden {
-			opacity: 0;
-			transform: translateY(50px);
-		}
-	}
-
-	&__play-btn {
-		@extend %trans;
-
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		min-height: 80px;
-		min-width: 80px;
-
-		background-color: var(--color-header-text);
-		border-radius: 40px;
-
-		&:hover .seller__play-svg,
-		&:focus .seller__play-svg {
-			transform: scale(1.3);
-		}
-
-		&:hover + .seller__play-text,
-		&:focus + .seller__play-text {
-			opacity: 1;
-			right: -240px;
-
-			letter-spacing: 0;
-		}
-
-		&:active {
-			transform: scale(0.9);
-		}
-	}
-
-	&__play-svg {
-		@extend %trans;
-	}
-
 	&__play-text {
 		padding-left: 30px;
 

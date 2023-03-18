@@ -23,7 +23,7 @@ export default {
 	},
 
 	babel: {
-		presets: ['@babel/env']
+		presets: ['@babel/env', '@babel/preset-react']
 	},
 
 	webpack: {

@@ -211,66 +211,6 @@
 		gap: 12px;
 	}
 
-	&__checkbox-wrapper {
-	}
-
-	&__checkbox {
-		display: none;
-
-		&:checked + .login__label-checkbox {
-			&::after {
-				content: "";
-				width: 18px;
-				height: 14px;
-
-				position: absolute;
-				transform: translateY(-50%);
-				left: 2px;
-				top: 50%;
-
-				background-color: var(--color-bg);
-				mask-image: url("../img/icon/check-small.svg");
-			}
-
-			&::before {
-				border-color: var(--color-btn-bg);
-				background-color: var(--color-btn-bg);
-			}
-		}
-	}
-
-	&__label-checkbox {
-		display: block;
-		padding-left: 32px;
-
-		position: relative;
-
-		font-size: 0.875rem;
-
-		cursor: pointer;
-
-		&::before {
-			@extend %trans;
-
-			content: "";
-			width: 0.875rem;
-			height: 0.875rem;
-
-			position: absolute;
-			left: 0;
-			bottom: 6px;
-
-			border-radius: 5px;
-			border: 1px solid var(--color-text);
-		}
-
-		&:hover {
-			&::before {
-				border-color: var(--color-btn-bg);
-			}
-		}
-	}
-
 	&__link {
 		@extend %trans;
 
@@ -519,10 +459,6 @@
 
 	.login__date {
 		height: 62px;
-	}
-
-	.login__label-checkbox::before {
-		bottom: 5px;
 	}
 
 	.login__label-radio::after {
