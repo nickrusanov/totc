@@ -34,7 +34,7 @@
 
 			background-color: white;
 
-			transition: all .6s ease;
+			transition: all .5s ease;
 		}
 
 		.preloader--hide {
@@ -55,9 +55,9 @@
 	</style>
 
 	<script>
-		window.onload = function () {
+		window.addEventListener('load', () => {
 			document.querySelector('.preloader').classList.add('preloader--hide');
-		}
+		})
 
 		switch (sessionStorage.getItem('theme')) {
 			case 'dark':
