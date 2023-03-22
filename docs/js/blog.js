@@ -1,10 +1,57 @@
 // 'use strict';
 
-window.onload = function () {
+window.addEventListener('load', function () {
 	if (window.location.search && window.innerWidth >= 1250) {
 		setTimeout(() => { document.getElementById('blog__search').scrollIntoView(true); }, 20)
 	}
+})
+
+// FILTERS
+
+const searchParams = new URLSearchParams(window.location.search);
+
+const sendFormByCategory = () => {
+	document.querySelectorAll('.category__input').forEach(el => {
+		el.addEventListener('change', () => {
+			document.getElementById('blog__form').submit();
+		})
+	})
 }
+
+const itemFiltersActive = () => {
+	document.querySelector('.search__input').value = searchParams.get('keyword');
+
+	document.querySelectorAll('.category__input').forEach(el => {
+		if ('rubric-' + searchParams.get('rubric') === el.id)
+			el.checked = true;
+	})
+}
+
+document.querySelector('.search__send').addEventListener('click', () => {
+	if (document.querySelector('.search__input').value === '') {
+		document.querySelector('.search__input').setAttribute('disabled', '');
+	}
+})
+
+const itemListFilters = () => {
+	if (searchParams.get('keyword')) {
+		let newArray = [];
+
+		searchParams.get('keyword').split(' ').forEach(word => {
+			newArray = newArray.concat(articalsArray.filter(el =>
+				el.name.toLowerCase().includes(word.toLowerCase()) && !newArray.includes(el)
+			));
+		})
+
+		articalsArray = newArray;
+	}
+
+	if (searchParams.get('rubric') !== 'all' && searchParams.getAll('rubric').length !== 0) {
+		articalsArray = articalsArray.filter(el => el.categoryGroup === searchParams.get('rubric'));
+	}
+}
+
+itemFiltersActive();
 
 
 // GET ARTICALS ARRAY
@@ -30,7 +77,6 @@ const itemListGet = (url) => {
 const itemListInit = (response) => {
 	articalsArray = JSON.parse(response);
 	itemListFilters();
-	itemFiltersActive();
 	sendFormByCategory();
 	itemContentRoot.render(<ArticalsContent />);
 }
@@ -93,51 +139,5 @@ class ArticalsContent extends React.Component {
 				{showBtn}
 			</div>
 		)
-	}
-}
-
-
-// FILTERS
-
-const searchParams = new URLSearchParams(window.location.search);
-
-const sendFormByCategory = () => {
-	document.querySelectorAll('.category__input').forEach(el => {
-		el.addEventListener('change', () => {
-			document.getElementById('blog__form').submit();
-		})
-	})
-}
-
-document.querySelector('.search__send').addEventListener('click', () => {
-	if (document.querySelector('.search__input').value === '') {
-		document.querySelector('.search__input').setAttribute('disabled', '');
-	}
-})
-
-const itemFiltersActive = () => {
-	document.querySelector('.search__input').value = searchParams.get('keyword');
-
-	document.querySelectorAll('.category__input').forEach(el => {
-		if ('rubric-' + searchParams.get('rubric') === el.id)
-			el.checked = true;
-	})
-}
-
-const itemListFilters = () => {
-	if (searchParams.get('keyword')) {
-		let newArray = [];
-
-		searchParams.get('keyword').split(' ').forEach(word => {
-			newArray = newArray.concat(articalsArray.filter(el =>
-				el.name.toLowerCase().includes(word.toLowerCase()) && !newArray.includes(el)
-			));
-		})
-
-		articalsArray = newArray;
-	}
-
-	if (searchParams.get('rubric') !== 'all' && searchParams.getAll('rubric').length !== 0) {
-		articalsArray = articalsArray.filter(el => el.categoryGroup === searchParams.get('rubric'));
 	}
 }
