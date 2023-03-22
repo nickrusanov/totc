@@ -8,5 +8,8 @@
 1. Адаптивность до 320px.
 2. Эффекты при наведении и анимации.
 3. Изменение темы (Светлая/Тёмная/Как на устройстве).
-4. Технологии: HTML5, CSS3, SCSS, JavaScript, Gulp.
-5. Библиотеки и плагины: jQuery, jQuery Masked Input, Slick-Carousel, Fancybox.
+4. Возможность фильтрации статей и курсов.
+5. Различные модальные окна и формы.
+6. Хлебные крошки.
+7. Технологии: HTML5, CSS3, SCSS, JavaScript, React JS, Gulp.
+8. Библиотеки и плагины: jQuery, jQuery Masked Input, Slick-Carousel, Fancybox.

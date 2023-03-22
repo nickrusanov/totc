@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 window.onload = function () {
 	if (window.location.search && window.innerWidth >= 1250) {
@@ -77,7 +77,7 @@ class ArticalsContent extends React.Component {
 								<li key={el.id} class="blog__item">
 									<a class="blog__item-link" href={el.link}>
 										<div class="blog__item-img-wrapper">
-											<img class="blog__item-img" src={el.img} alt="photo" />
+											<img class="blog__item-img" src={el.img} alt="превью статьи" />
 											<p class="blog__item-category">{el.category}</p>
 											<p class="blog__item-date">{el.date}</p>
 										</div>

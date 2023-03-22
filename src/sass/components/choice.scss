@@ -391,7 +391,7 @@
 }
 
 @include media("900px") {
-	.category__input:checked + .category__label::after {
+	.choice__category .category__input:checked + .category__label::after {
 		top: 7px;
 	}
 }

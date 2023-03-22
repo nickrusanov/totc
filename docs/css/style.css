@@ -5338,6 +5338,7 @@ main {
 .about__btn-main {
   display: block;
   margin: 0 auto;
+  text-align: center;
 }
 
 .about__decor {
@@ -7931,7 +7932,7 @@ main {
     gap: 0;
   }
 
-  .category__input:checked + .category__label::after {
+  .choice__category .category__input:checked + .category__label::after {
     top: 7px;
   }
 
