@@ -17,6 +17,7 @@ $(window).on('load', function () {
 		})
 	}
 
+	
 	// COURSES LIST
 
 	if ($('body').hasClass('page-courses')) {
@@ -50,6 +51,7 @@ $(window).on('load', function () {
 			return count + text;
 		}
 	}
+
 
 	// BLOG LIST
 

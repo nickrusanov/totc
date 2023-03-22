@@ -1,0 +1,143 @@
+.blog {
+	margin: 40px 0 var(--margin-block);
+
+	&__title-1 {
+		text-align: center;
+		color: var(--color-title);
+	}
+
+	&__search {
+		margin-bottom: var(--margin-el);
+	}
+
+	&__category {
+		margin-bottom: var(--margin-el);
+	}
+
+	&__title-4 {
+		margin-bottom: 10px;
+
+		color: var(--color-title);
+	}
+
+	&__content {
+		width: 100%;
+	}
+
+	&__qty {
+		color: var(--color-placeholder);
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 30px;
+		row-gap: 40px;
+		margin-bottom: var(--margin-el);
+	}
+
+	&__item-header {
+		margin-bottom: 30px;
+	}
+
+	&__item-img-wrapper {
+		margin-bottom: 15px;
+
+		position: relative;
+
+		border-radius: 20px;
+	}
+
+	&__item-img {
+		min-height: 300px;
+		width: 100%;
+		height: 100%;
+
+		object-fit: cover;
+		object-position: right;
+	}
+
+	&__item-category {
+		padding: 6px 24px;
+
+		position: absolute;
+		bottom: 24px;
+		left: 24px;
+
+		font-size: 0.875rem;
+		color: var(--color-bg);
+
+		background-color: var(--color-btn-bg);
+		border-radius: 40px;
+	}
+
+	&__item-title {
+		@extend %trans;
+
+		color: var(--color-artical-text);
+		font-weight: 600;
+	}
+
+	&__item-date {
+		padding: 6px 24px;
+
+		position: absolute;
+		top: 24px;
+		left: 24px;
+
+		font-size: 0.875rem;
+		color: var(--color-text);
+
+		background-color: var(--color-bg);
+		border-radius: 40px;
+	}
+
+	&__show-btn {
+		@extend %btn-main;
+
+		display: block;
+		width: auto;
+		padding: 12px 16px;
+		margin: 0 auto;
+
+		font-size: 0.875rem;
+	}
+}
+
+/* MEDIA
+**************************************/
+
+@media (hover: hover) and (pointer: fine) {
+	.blog__item:hover {
+		& .blog__item-title {
+			color: var(--color-text-special--hover);
+		}
+	}
+}
+
+@include media('1400px') {
+	.blog__item-img {
+		min-height: 240px;
+	}
+}
+
+@include xl {
+	.blog__content {
+		margin: 0 auto;
+		max-width: 830px;
+	}
+
+	.blog__list {
+		grid-template-columns: repeat(2,1fr);
+	}
+}
+
+@include md {
+	.blog__list {
+		grid-template-columns: repeat(1,1fr);
+	}
+	
+	.blog__content {
+		max-width: 430px;
+	}
+}

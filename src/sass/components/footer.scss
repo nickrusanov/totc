@@ -61,10 +61,6 @@
 		line-height: 150%;
 
 		color: var(--color-footer-text);
-
-		&:hover {
-			text-decoration: underline var(--color-footer-text);
-		}
 	}
 
 	&__item-inner {
@@ -109,10 +105,6 @@
 
 			fill: var(--color-footer-text);
 		}
-
-		&:hover {
-			transform: scale(1.15);
-		}
 	}
 
 	&__form {
@@ -152,17 +144,29 @@
 
 		background-color: var(--color-btn-bg);
 		border-radius: 10px;
-
-		&:hover {
-			background-color: var(--color-btn-bg--hover);
-		}
 	}
 }
 
 /* MEDIA
 **************************************/
 
-@include media('1600px') {
+@media (hover: hover) and (pointer: fine) {
+	.footer {
+		&__link:hover {
+			text-decoration: underline var(--color-footer-text);
+		}
+
+		&__send:hover {
+			background-color: var(--color-btn-bg--hover);
+		}
+
+		&__socials-svg:hover {
+			transform: scale(1.15);
+		}
+	}
+}
+
+@include media("1600px") {
 	.footer__box-inner {
 		flex-direction: row;
 		align-items: center;
@@ -184,19 +188,19 @@
 	}
 }
 
-@include media('900px') {
+@include media("900px") {
 	.footer__input {
 		padding: 14px 16px;
 
-		font-size: .8rem;
+		font-size: 0.8rem;
 
 		&::placeholder {
-			font-size: .8rem;
+			font-size: 0.8rem;
 		}
 	}
 }
 
-@include media('850px') {
+@include media("850px") {
 	.footer__box-list {
 		flex-direction: column;
 	}
@@ -219,7 +223,7 @@
 		position: relative;
 
 		cursor: pointer;
-		transition: all .5s ease;
+		transition: all 0.5s ease;
 
 		&::after {
 			content: "";
@@ -233,7 +237,7 @@
 			border: 5px solid #fff;
 			border-color: var(--color-footer-text) transparent transparent transparent;
 
-			transition: all .5s ease;
+			transition: all 0.5s ease;
 		}
 
 		&--active {
@@ -245,7 +249,7 @@
 	}
 }
 
-@include media('600px') {
+@include media("600px") {
 	.footer__box-inner {
 		justify-content: center;
 	}

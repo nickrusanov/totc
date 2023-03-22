@@ -1201,6 +1201,14 @@
 	.feedback__text--center {
 		text-align: center;
 	}
+
+	.feedback__photo-wrapper {
+		margin: 0 auto;
+	}
+
+	.feedback__comment {
+		max-width: 100%;
+	}
 }
 
 @include xl {

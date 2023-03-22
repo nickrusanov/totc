@@ -1,7 +1,7 @@
 <header class="header @@if (context.page === 'home') {header--shift}">
 	<div class="container">
 		<div class="header__inner">
-			<a class="header__logo-link" href="index.html">
+			<a class="header__logo-link" href="./index.html">
 				<svg viewBox="0 0 114 82" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path
 						d="M37.986 4.87742C39.9336 2.95328 43.0664 2.95329 45.014 4.87742L77.9769 37.4431C79.9581 39.4005 79.9581 42.5995 77.9769 44.5569L45.014 77.1226C43.0664 79.0467 39.9336 79.0467 37.986 77.1226L5.02313 44.5569C3.04186 42.5995 3.04186 39.4005 5.02314 37.4431L37.986 4.87742Z"
@@ -16,52 +16,52 @@
 					<p class="nav__title">МЕНЮ</p>
 					<ul class="nav__list">
 						<li class="nav__item">
-							<a class="nav__link @@if (context.page === 'home') {nav__link--active}" href="index.html">Главная</a>
+							<a class="nav__link @@if (context.page === 'home') {nav__link--active}" href="./index.html">Главная</a>
 						</li>
 
 						<li class="nav__item nav__item--submenu">
-							<a class="nav__link" href="courses.html">Курсы</a>
+							<a class="nav__link @@if (context.page === 'courses') {nav__link--active}" href="./courses.html">Курсы</a>
 
 							<div class="subnav">
 								<ul class="subnav__list">
 									<li class="subnav__item">
-										<a class="subnav__link" href="choice.html?profession=programming">Программирование</a>
+										<a class="subnav__link" href="./choice.html?profession=programming">Программирование</a>
 									</li>
 
 									<li class="subnav__item">
-										<a class="subnav__link" href="choice.html?profession=data">Анализ данных</a>
+										<a class="subnav__link" href="./choice.html?profession=data">Анализ данных</a>
 									</li>
 
 									<li class="subnav__item">
-										<a class="subnav__link" href="choice.html?profession=marketing">Маркетинг</a>
+										<a class="subnav__link" href="./choice.html?profession=marketing">Маркетинг</a>
 									</li>
 
 									<li class="subnav__item">
-										<a class="subnav__link" href="choice.html?profession=management">Управление</a>
+										<a class="subnav__link" href="./choice.html?profession=management">Управление</a>
 									</li>
 
 									<li class="subnav__item">
-										<a class="subnav__link" href="choice.html?profession=design">Дизайн</a>
+										<a class="subnav__link" href="./choice.html?profession=design">Дизайн</a>
 									</li>
 
 									<li class="subnav__item">
-										<a class="subnav__link" href="choice.html?profession=english">Английский язык</a>
+										<a class="subnav__link" href="./choice.html?profession=english">Английский язык</a>
 									</li>
 								</ul>
 							</div>
 						</li>
 
 						<li class="nav__item">
-							<a class="nav__link @@if (context.page === 'tariffs') {nav__link--active}" href="tariffs.html">Тарифы</a>
+							<a class="nav__link @@if (context.page === 'tariffs') {nav__link--active}" href="./tariffs.html">Тарифы</a>
 						</li>
 
 						<li class="nav__item">
-							<a class="nav__link" href="#">Блог</a>
+							<a class="nav__link @@if (context.page === 'blog') {nav__link--active}" href="./blog.html">Блог</a>
 
 						</li>
 
 						<li class="nav__item">
-							<a class="nav__link @@if (context.page === 'about') {nav__link--active}" href="about.html">О нас</a>
+							<a class="nav__link @@if (context.page === 'about') {nav__link--active}" href="./about.html">О нас</a>
 						</li>
 
 						<li class="nav__item nav__item--submenu nav__item--tablet">

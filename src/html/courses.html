@@ -9,7 +9,7 @@
 <body class="page-courses">
 	@@include('./components/preload.html')
 
-	@@include('./components/header.html')
+	@@include('./components/header.html', {"page": "courses"})
 
 	<main class="main">
 		<div class="breadcrumbs">
@@ -34,10 +34,10 @@
 
 		<section class="courses">
 			<div class="container">
-				<h1 class="courses__title-1 title-1">Наши <strong>курсы</strong></h1>
+				<h1 class="courses__title-1 title-1 hidden">Наши <strong>курсы</strong></h1>
 
 				<ul class="courses__list">
-					<li class="courses__item">
+					<li class="courses__item hidden">
 						<a class="courses__link" href="choice.html?profession=programming">
 							<img class="courses__img" src="./img/courses/programming.jpg" alt="programming">
 
@@ -49,7 +49,7 @@
 						</a>
 					</li>
 
-					<li class="courses__item">
+					<li class="courses__item hidden">
 						<a class="courses__link" href="choice.html?profession=data">
 							<img class="courses__img" src="./img/courses/data.jpg" alt="data">
 
@@ -60,7 +60,7 @@
 						</a>
 					</li>
 
-					<li class="courses__item">
+					<li class="courses__item hidden">
 						<a class="courses__link" href="choice.html?profession=design">
 							<img class="courses__img" src="./img/courses/design.jpg" alt="design">
 
@@ -71,7 +71,7 @@
 						</a>
 					</li>
 
-					<li class="courses__item">
+					<li class="courses__item hidden">
 						<a class="courses__link" href="choice.html?profession=management">
 							<img class="courses__img" src="./img/courses/management.jpg" alt="management">
 
@@ -82,7 +82,7 @@
 						</a>
 					</li>
 
-					<li class="courses__item">
+					<li class="courses__item hidden">
 						<a class="courses__link" href="choice.html?profession=marketing">
 							<img class="courses__img" src="./img/courses/marketing.jpg" alt="marketing">
 
@@ -93,7 +93,7 @@
 						</a>
 					</li>
 
-					<li class="courses__item">
+					<li class="courses__item hidden">
 						<a class="courses__link" href="choice.html?profession=english">
 							<img class="courses__img" src="./img/courses/english.jpg" alt="english">
 
@@ -104,28 +104,28 @@
 						</a>
 					</li>
 
-					<li class="courses__item courses__item--small">
+					<li class="courses__item courses__item--small hidden">
 						<a class="courses__link" href="choice.html?experience=newbie">
 							<p class="courses__category-title">Учёба с нуля</p>
 							<p class="courses__quantity" id="experience-newbie">12 курсов</p>
 						</a>
 					</li>
 
-					<li class="courses__item courses__item--medium">
+					<li class="courses__item courses__item--medium hidden">
 						<a class="courses__link" href="choice.html?experience=skilled">
 							<p class="courses__category-title">Уже опытным</p>
 							<p class="courses__quantity" id="experience-skilled">12 курсов</p>
 						</a>
 					</li>
 
-					<li class="courses__item courses__item--medium">
+					<li class="courses__item courses__item--medium hidden">
 						<a class="courses__link" href="choice.html?price=free">
 							<p class="courses__category-title">Бесплатно</p>
 							<p class="courses__quantity" id="price-free">12 курсов</p>
 						</a>
 					</li>
 
-					<li class="courses__item courses__item--small">
+					<li class="courses__item courses__item--small hidden">
 						<a class="courses__link" href="choice.html">
 							<p class="courses__category-title">Все курсы</p>
 							<p class="courses__quantity" id="courses-all">12 курсов</p>
@@ -137,7 +137,7 @@
 
 		<section class="unleash">
 			<div class="container container--w1000">
-				<h2 class="unleash__title-2 title-2">
+				<h2 class="unleash__title-2 title-2 hidden">
 					Раскройте свои <strong>сильные стороны</strong>
 				</h2>
 
@@ -145,16 +145,16 @@
 					<div class="unleash__content">
 						<div class="unleash__flex">
 							<div class="unleash__box">
-								<h3 class="unleash__title-3 title-3"><strong>Решитесь</strong> на большее</h3>
+								<h3 class="unleash__title-3 title-3 hidden"><strong>Решитесь</strong> на большее</h3>
 
-								<p class="unleash__text">
+								<p class="unleash__text text hidden">
 									Вам есть что показать этому миру. Позвольте себе ставить большие цели, а навыки и знания дадим мы. Для
 									этого у нас есть все инструменты.
 								</p>
 							</div>
 
 							<div class="unleash__svg-wrapper">
-								<svg class="unleash__svg" width="130" height="110" viewBox="0 0 130 110" fill="none"
+								<svg class="unleash__svg hidden" width="130" height="110" viewBox="0 0 130 110" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
 									<g clip-path="url(#clip0_185_960)">
 										<mask id="mask0_185_960" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
@@ -187,7 +187,7 @@
 					<div class="unleash__content">
 						<div class="unleash__flex">
 							<div class="unleash__svg-wrapper">
-								<svg class="unleash__svg" width="150" height="86" viewBox="0 0 150 86" fill="none"
+								<svg class="unleash__svg hidden" width="150" height="86" viewBox="0 0 150 86" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
 									<g clip-path="url(#clip0_185_941)">
 										<mask id="mask0_185_941" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
@@ -233,14 +233,14 @@
 							</div>
 
 							<div class="unleash__box">
-								<h3 class="unleash__title-3 title-3"><strong>Выберите</strong> направление</h3>
+								<h3 class="unleash__title-3 title-3 hidden"><strong>Выберите</strong> направление</h3>
 
-								<p class="unleash__text">
+								<p class="unleash__text text hidden">
 									С нами вы можете получить новую профессию, освоить навыки для развития карьеры или перенастроить свой
 									бизнес.
 								</p>
 
-								<a class="unleash__link" href="#">Выбрать курс</a>
+								<a class="unleash__link hidden" href="./courses.html">Выбрать курс</a>
 							</div>
 						</div>
 					</div>
@@ -248,16 +248,16 @@
 					<div class="unleash__content">
 						<div class="unleash__flex">
 							<div class="unleash__box">
-								<h3 class="unleash__title-3 title-3"><strong>Действуйте</strong></h3>
+								<h3 class="unleash__title-3 title-3 hidden"><strong>Действуйте</strong></h3>
 
-								<p class="unleash__text">
+								<p class="unleash__text text hidden">
 									Мы создали комфортную среду обучения, чтобы у вас всегда была мотивация двигаться вперёд. Учитесь,
 									практикуйтесь и применяйте знания сразу в работе. Мы дадим знания и навыки, необходимые для работы.
 								</p>
 							</div>
 
 							<div class="unleash__svg-wrapper">
-								<svg class="unleash__svg" width="130" height="110" viewBox="0 0 130 110" fill="none"
+								<svg class="unleash__svg hidden" width="130" height="110" viewBox="0 0 130 110" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
 									<g clip-path="url(#clip0_185_970)">
 										<mask id="mask0_185_970" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
@@ -308,82 +308,90 @@
 
 		<section class="history">
 			<div class="container">
-				<h2 class="unleash__title-2 title-2">
+				<h2 class="unleash__title-2 title-2 hidden">
 					Истории <strong>выпускников</strong>
 				</h2>
 
-				<ul class="history__list">
+				<ul class="history__list hidden">
 					<li class="history__item">
-						<picture>
-							<source srcset="./img/courses/slider/history-1.webp" type="image/webp">
-							<img class="history__img" src="./img/courses/slider/history-1.png" alt="history">
-						</picture>
+						<div class="history__item-inner">
+							<picture class="history__picture">
+								<source srcset="./img/courses/slider/history-1.webp" type="image/webp">
+								<img class="history__img" src="./img/courses/slider/history-1.png" alt="history">
+							</picture>
 
-						<p class="history__title-3 title-3">
-							Из разнорабочего — в разработчики: история Дамира
-						</p>
+							<p class="history__title-3 title-3">
+								Из разнорабочего — в разработчики: история Дамира
+							</p>
 
-						<div class="history__btn-box">
-							<a class="video-play__btn" href="https://youtu.be/COaXBeiKezw" data-fancybox>
-								<svg class="video-play__svg" width="32" height="34" viewBox="0 0 32 34" fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M30.6104 16.1476C31.2466 16.5378 31.2466 17.4622 30.6104 17.8524L9.52289 30.7882C8.85658 31.197 8 30.7175 8 29.9358L8 4.06416C8 3.28247 8.85658 2.80302 9.52289 3.21176L30.6104 16.1476Z"
-										fill="#23BDEE" />
-								</svg>
-							</a>
+							<div class="history__btn-box">
+								<div class="video-play">
+									<a class="video-play__btn" href="https://youtu.be/COaXBeiKezw" data-fancybox>
+										<svg class="video-play__svg" width="32" height="34" viewBox="0 0 32 34" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M30.6104 16.1476C31.2466 16.5378 31.2466 17.4622 30.6104 17.8524L9.52289 30.7882C8.85658 31.197 8 30.7175 8 29.9358L8 4.06416C8 3.28247 8.85658 2.80302 9.52289 3.21176L30.6104 16.1476Z"
+												fill="#23BDEE" />
+										</svg>
+									</a>
+								</div>
 
-							<a class="history__link-btn" href="login.html">Попробовать бесплатно</a>
+								<a class="history__link-btn" href="login.html">Попробовать бесплатно</a>
+							</div>
 						</div>
 					</li>
 
 
 					<li class="history__item">
-						<picture>
-							<source srcset="./img/courses/slider/history-2.webp" type="image/webp">
-							<img class="history__img" src="./img/courses/slider/history-2.png" alt="history">
-						</picture>
+						<div class="history__item-inner">
+							<picture class="history__picture">
+								<source srcset="./img/courses/slider/history-2.webp" type="image/webp">
+								<img class="history__img" src="./img/courses/slider/history-2.png" alt="history">
+							</picture>
 
-						<p class="history__title-3 title-3">
-							Из медсестры — в маркетинг: история Светы
-						</p>
+							<p class="history__title-3 title-3">
+								Из медсестры — в маркетинг: история Светы
+							</p>
 
-						<div class="history__btn-box">
-							<a class="video-play__btn" href="https://youtu.be/sJQEJvTVwys" data-fancybox>
-								<svg class="video-play__svg" width="32" height="34" viewBox="0 0 32 34" fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M30.6104 16.1476C31.2466 16.5378 31.2466 17.4622 30.6104 17.8524L9.52289 30.7882C8.85658 31.197 8 30.7175 8 29.9358L8 4.06416C8 3.28247 8.85658 2.80302 9.52289 3.21176L30.6104 16.1476Z"
-										fill="#23BDEE" />
-								</svg>
-							</a>
+							<div class="history__btn-box">
+								<a class="video-play__btn" href="https://youtu.be/sJQEJvTVwys" data-fancybox>
+									<svg class="video-play__svg" width="32" height="34" viewBox="0 0 32 34" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M30.6104 16.1476C31.2466 16.5378 31.2466 17.4622 30.6104 17.8524L9.52289 30.7882C8.85658 31.197 8 30.7175 8 29.9358L8 4.06416C8 3.28247 8.85658 2.80302 9.52289 3.21176L30.6104 16.1476Z"
+											fill="#23BDEE" />
+									</svg>
+								</a>
 
-							<a class="history__link-btn" href="login.html">Попробовать бесплатно</a>
+								<a class="history__link-btn" href="login.html">Попробовать бесплатно</a>
+							</div>
 						</div>
 					</li>
 
 
 					<li class="history__item">
-						<picture>
-							<source srcset="./img/courses/slider/history-3.webp" type="image/webp">
-							<img class="history__img" src="./img/courses/slider/history-3.png" alt="history">
-						</picture>
+						<div class="history__item-inner">
+							<picture class="history__picture">
+								<source srcset="./img/courses/slider/history-3.webp" type="image/webp">
+								<img class="history__img" src="./img/courses/slider/history-3.png" alt="history">
+							</picture>
 
-						<p class="history__title-3 title-3">
-							Из сварщика — в менеджеры: история Дениса
-						</p>
+							<p class="history__title-3 title-3">
+								Из сварщика — в менеджеры: история Дениса
+							</p>
 
-						<div class="history__btn-box">
-							<a class="video-play__btn" href="https://youtu.be/_KUyt-aTvGc" data-fancybox>
-								<svg class="video-play__svg" width="32" height="34" viewBox="0 0 32 34" fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M30.6104 16.1476C31.2466 16.5378 31.2466 17.4622 30.6104 17.8524L9.52289 30.7882C8.85658 31.197 8 30.7175 8 29.9358L8 4.06416C8 3.28247 8.85658 2.80302 9.52289 3.21176L30.6104 16.1476Z"
-										fill="#23BDEE" />
-								</svg>
-							</a>
+							<div class="history__btn-box">
+								<a class="video-play__btn" href="https://youtu.be/_KUyt-aTvGc" data-fancybox>
+									<svg class="video-play__svg" width="32" height="34" viewBox="0 0 32 34" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M30.6104 16.1476C31.2466 16.5378 31.2466 17.4622 30.6104 17.8524L9.52289 30.7882C8.85658 31.197 8 30.7175 8 29.9358L8 4.06416C8 3.28247 8.85658 2.80302 9.52289 3.21176L30.6104 16.1476Z"
+											fill="#23BDEE" />
+									</svg>
+								</a>
 
-							<a class="history__link-btn" href="login.html">Попробовать бесплатно</a>
+								<a class="history__link-btn" href="./login.html">Попробовать бесплатно</a>
+							</div>
 						</div>
 					</li>
 				</ul>
@@ -391,28 +399,32 @@
 		</section>
 
 		<section class="free-start">
-			<div class="container container--w1000">
-				<h2 class="title-2 free-start__title-2">
+			<div class="container">
+				<h2 class="title-2 free-start__title-2 hidden">
 					Начать просто. <strong>Попробуйте</strong>
 				</h2>
 
-				<p class="free-start__text">
+				<p class="free-start__text text hidden">
 					Мы собрали бесплатные курсы и занятия, которые помогут открыть вам для себя нечто новое.
 				</p>
 
-				<ul class="free-start__course-list">
-					<li class="free-start__course-item">
-						<a class="free-start__course-link" href="#">
-							<h4 class="free-start__course-title">Аналитик данных</h4>
-						</a>
+				<ul class="free-start__course-list" id="free-start__course-list">
+					<li>
+						<p class="free-start__preload">Загрузка...</p>
 					</li>
 				</ul>
+
+				<a class="free-start__btn hidden" href="./choice.html">Больше курсов</a>
 			</div>
 		</section>
 	</main>
 
 	@@include('./components/footer.html')
 
+	<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+	<script src="./js/courses.js" type="text/babel"></script>
 	<script src="js/script.min.js"></script>
 </body>
 

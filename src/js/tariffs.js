@@ -1,6 +1,7 @@
 import $ from 'jquery';
 
 $(window).on('load', function () {
+
 	// PRICE CHANGE
 
 	if ($('input[name="users"]').length !== 0) {
@@ -22,19 +23,21 @@ $(window).on('load', function () {
 
 	// FAQ ACCORDION
 
-	$('.faq__item-btn').on('click', event => {
-		event.currentTarget.lastElementChild.classList.toggle('faq__item-btn-svg--active');
+	if ($('.faq__item-btn').length !== 0) {
+		$('.faq__item-btn').on('click', event => {
+			event.currentTarget.lastElementChild.classList.toggle('faq__item-btn-svg--active');
 
-		$('.faq__item-text').each((i, el) => {
-			if (event.currentTarget.parentElement.contains(el)) {
-				event.currentTarget.parentElement.classList.contains('faq__item--active')
-					? el.style.maxHeight = 0
-					: el.style.maxHeight = el.scrollHeight + 'px';
+			$('.faq__item-text').each((i, el) => {
+				if (event.currentTarget.parentElement.contains(el)) {
+					event.currentTarget.parentElement.classList.contains('faq__item--active')
+						? el.style.maxHeight = 0
+						: el.style.maxHeight = el.scrollHeight + 'px';
 
-				event.currentTarget.parentElement.classList.toggle('faq__item--active');
-			}
+					event.currentTarget.parentElement.classList.toggle('faq__item--active');
+				}
+			})
 		})
-	})
+	}
 
 
 	// LINKS

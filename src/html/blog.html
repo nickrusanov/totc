@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('./components/head.html', {
+"title": "Блог | TOTC",
+"description": "TOTC — современная платформа, созданная для интерактивного обучения."
+})
+
+<body class="blog-page">
+	<style type="text/css">
+		@keyframes preload {
+			from {
+				transform: rotate(-45deg);
+			}
+
+			to {
+				transform: rotate(315deg);
+			}
+		}
+
+		.preloader {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			gap: 5px;
+			width: 100%;
+			height: 100vh;
+
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 1000;
+			opacity: 1;
+
+			background-color: white;
+
+			transition: all .5s ease;
+		}
+
+		.preloader--hide {
+			opacity: 0;
+			z-index: -1;
+			pointer-events: none;
+		}
+
+		.preloader img {
+			display: block;
+			width: 40px;
+			transform-origin: center;
+
+			opacity: 0.8;
+
+			animation: preload 1s ease 0s infinite;
+		}
+	</style>
+
+	<div class="preloader">
+		<img src="./img/loading.png" alt="loading">
+	</div>
+
+	<script type="text/javascript">
+		window.addEventListener("load", function () {
+			setTimeout(() => document.querySelector('.preloader').classList.add('preloader--hide'), 500)
+
+		});
+
+		switch (sessionStorage.getItem('theme')) {
+			case 'dark':
+				document.querySelector('.preloader').style.backgroundColor = '#262C2C';
+				break;
+			case 'light':
+				break;
+			default:
+				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					document.querySelector('.preloader').style.backgroundColor = '#262C2C';
+				}
+		}
+	</script>
+
+	<noscript>
+		<style>
+			.preloader {
+				display: none !important;
+			}
+		</style>
+	</noscript>
+
+	@@include('./components/header.html', {"page": "blog"})
+
+	<main class="main blog-page__main">
+		<div class="breadcrumbs blog-page__breadcrumbs">
+			<div class="container">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link" href="./index.html">
+							<svg class="breadcrumbs__link-svg" width="30" height="27" viewBox="0 0 30 27" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M11.5475 24.4564V16.6509H17.8518V24.4564C17.8518 25.315 18.561 26.0175 19.4278 26.0175H24.1561C25.0229 26.0175 25.7321 25.315 25.7321 24.4564V13.5288H28.4115C29.1365 13.5288 29.4832 12.6389 28.9316 12.1706L15.7556 0.41558C15.1567 -0.115191 14.2426 -0.115191 13.6437 0.41558L0.467672 12.1706C-0.068193 12.6389 0.262782 13.5288 0.987777 13.5288H3.6671V24.4564C3.6671 25.315 4.37634 26.0175 5.24318 26.0175H9.9714C10.8382 26.0175 11.5475 25.315 11.5475 24.4564Z" />
+							</svg>
+						</a>
+					</li>
+
+					<li class="breadcrumbs__item">
+						<span class="breadcrumbs__link">Блог</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<section class="blog">
+			<div class="container">
+				<h1 class="blog__title-1 title-1"><strong>Блог</strong></h1>
+
+				<form class="search blog__search" action="./blog.html" id="blog__search">
+					<input class="search__input" type="search" name="keyword" placeholder="Поиск по названиям">
+					<button class="search__send" type="submit">
+						<span class="search__send-text">Найти</span>
+
+						<svg class="search__send-svg" width="30" height="30" viewBox="0 0 30 30" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M27.6667 30L17.1667 19.5C16.3333 20.1667 15.375 20.6944 14.2917 21.0833C13.2083 21.4722 12.0556 21.6667 10.8333 21.6667C7.80556 21.6667 5.24333 20.6183 3.14667 18.5217C1.04889 16.4239 0 13.8611 0 10.8333C0 7.80556 1.04889 5.24278 3.14667 3.145C5.24333 1.04833 7.80556 0 10.8333 0C13.8611 0 16.4239 1.04833 18.5217 3.145C20.6183 5.24278 21.6667 7.80556 21.6667 10.8333C21.6667 12.0556 21.4722 13.2083 21.0833 14.2917C20.6944 15.375 20.1667 16.3333 19.5 17.1667L30 27.6667L27.6667 30ZM10.8333 18.3333C12.9167 18.3333 14.6878 17.6044 16.1467 16.1467C17.6044 14.6878 18.3333 12.9167 18.3333 10.8333C18.3333 8.75 17.6044 6.97889 16.1467 5.52C14.6878 4.06222 12.9167 3.33333 10.8333 3.33333C8.75 3.33333 6.97889 4.06222 5.52 5.52C4.06222 6.97889 3.33333 8.75 3.33333 10.8333C3.33333 12.9167 4.06222 14.6878 5.52 16.1467C6.97889 17.6044 8.75 18.3333 10.8333 18.3333Z" />
+						</svg>
+					</button>
+				</form>
+
+				<div class="category__wrapper">
+					<form class="blog__form" id='blog__form' action="./blog.html">
+						<div class="category blog__category">
+							<input class="category__input" type="radio" name="rubric" value="all" id="rubric-all" form="blog__form"
+								checked>
+							<label class="category__label" for="rubric-all">Все рубрики</label>
+
+							<input class="category__input" type="radio" name="rubric" value="articals" id="rubric-articals"
+								form="blog__form">
+							<label class="category__label" for="rubric-articals">Статьи</label>
+
+							<input class="category__input" type="radio" name="rubric" value="news" id="rubric-news" form="blog__form">
+							<label class="category__label" for="rubric-news">Новости</label>
+
+							<input class="category__input" type="radio" name="rubric" value="case" id="rubric-case" form="blog__form">
+							<label class="category__label" for="rubric-case">Кейсы</label>
+						</div>
+					</form>
+				</div>
+
+				<div class="blog__content" id="blog__content">
+					<div class='blog__item-header'>
+						<p class="blog__search-qty">
+							Найдено: <span>{articalsArray.length}</span>
+						</p>
+					</div>
+
+					<ul class="blog__list" id="blog__list">
+						<li class="blog__item">
+							<a class="blog__item-link" href="#">
+								<div class="blog__item-img-wrapper">
+									<img class="blog__item-img" src="./img/blog/news-1.jpg" alt="photo" />
+									<p class="blog__item-category">Статьи</p>
+								</div>
+
+								<h2 class="blog__item-title">Садись, эффективен: 6 моделей оценки эффективности обучения</h2>
+
+								<p class="blog__item-date">21.02.23</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	@@include('./components/footer.html')
+
+	<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+	<script src="./js/blog.js" type="text/babel"></script>
+	<script src="./js/script.min.js"></script>
+</body>
+
+</html>

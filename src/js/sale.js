@@ -42,7 +42,7 @@ $(window).on('load', function () {
 		initCountdown();
 
 
-		// CLOSE 
+		// CLOSE
 
 		$('.sale').on('click', event => {
 			if ($('.sale__close-btn')[0].contains(event.target)) {

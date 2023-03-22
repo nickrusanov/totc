@@ -7,9 +7,86 @@
 })
 
 <body class="choice-page">
-	@@include('./components/preload.html')
+	<style type="text/css">
+		@keyframes preload {
+			from {
+				transform: rotate(-45deg);
+			}
 
-	@@include('./components/header.html')
+			to {
+				transform: rotate(315deg);
+			}
+		}
+
+		.preloader {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			gap: 5px;
+			width: 100%;
+			height: 100vh;
+
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 1000;
+			opacity: 1;
+
+			background-color: white;
+
+			transition: all .5s ease;
+		}
+
+		.preloader--hide {
+			opacity: 0;
+			z-index: -1;
+			pointer-events: none;
+		}
+
+		.preloader img {
+			display: block;
+			width: 40px;
+			transform-origin: center;
+
+			opacity: 0.8;
+
+			animation: preload 1s ease 0s infinite;
+		}
+	</style>
+
+	<div class="preloader">
+		<img src="./img/loading.png" alt="loading">
+	</div>
+
+	<script type="text/javascript">
+		window.addEventListener("load", function () {
+			setTimeout(() => document.querySelector('.preloader').classList.add('preloader--hide'), 500)
+			
+		});
+
+		switch (sessionStorage.getItem('theme')) {
+			case 'dark':
+				document.querySelector('.preloader').style.backgroundColor = '#262C2C';
+				break;
+			case 'light':
+				break;
+			default:
+				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					document.querySelector('.preloader').style.backgroundColor = '#262C2C';
+				}
+		}
+	</script>
+
+	<noscript>
+		<style>
+			.preloader {
+				display: none !important;
+			}
+		</style>
+	</noscript>
+
+	@@include('./components/header.html', {"page": "courses"})
 
 	<main class="main choice-page__main">
 		<div class="breadcrumbs choice-page__breadcrumbs">
@@ -40,7 +117,7 @@
 			<div class="container">
 				<h1 class="choice__title-1 title-1">Каталог <strong>курсов</strong></h1>
 
-				<form class="search choice__search" action="/choice.html">
+				<form class="search choice__search" action="./choice.html" id="choice__search">
 					<input class="search__input" type="search" name="keyword" placeholder="Какой курс вам нужен?">
 					<button class="search__send" type="submit">
 						<span class="search__send-text">Найти курс</span>
@@ -100,7 +177,7 @@
 								</svg>
 							</button>
 
-							<form class="choice__form" action="/choice.html" id="choice__form">
+							<form class="choice__form" action="./choice.html" id="choice__form">
 								<div class="choice__filter">
 									<p class="choice__title-4 title-4">Стоимость</p>
 
@@ -163,11 +240,11 @@
 
 	@@include('./components/footer.html')
 
-	<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-	<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-	<script src="js/courses.js" type="text/babel"></script>
-	<script src="js/script.min.js"></script>
+	<script src="./js/choice.js" type="text/babel"></script>
+	<script src="./js/script.min.js"></script>
 </body>
 
 </html>
