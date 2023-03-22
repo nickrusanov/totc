@@ -4755,6 +4755,7 @@ main {
 }
 
 .header__darkmode-img {
+  display: block;
   height: 44px;
   width: 44px;
   position: absolute;
