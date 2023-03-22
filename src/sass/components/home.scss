@@ -314,7 +314,7 @@
 
 		display: block;
 		margin: 0 auto;
-		
+
 		text-align: center;
 	}
 
@@ -915,6 +915,7 @@
 	}
 
 	&__author-name {
+		font-style: normal;
 		font-weight: 600;
 		color: var(--color-title-accent);
 	}
