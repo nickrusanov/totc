@@ -83,12 +83,15 @@ class ProductContent extends React.Component {
 								<li key={el.id} className={productItem}>
 									<a className="choice__product-link" href={el.link}>
 										<div className="choice__product-img-wrapper">
-											<img className="choice__product-img" src={el.img} alt="photo" />
-
+											<picture>
+												<source srcset={el.img.substring(0, el.img.lastIndexOf('.'))+'.webp'} type="image/webp" />
+												<img class="choice__product-img" src={el.img} alt="фото" />
+											</picture>
+											
 											{productSale}
 										</div>
 
-										<p className="choice__product-title">{el.name}</p>
+										<h2 className="choice__product-title">{el.name}</h2>
 
 										<div className="choice__product-tag-box">
 											<p className="choice__product-tag">{el.category}</p>

@@ -1,7 +1,7 @@
 <header class="header @@if (context.page === 'home') {header--shift}">
 	<div class="container">
 		<div class="header__inner">
-			<a class="header__logo-link" href="./index.html">
+			<a class="header__logo-link" href="./index.html" aria-label="вернуться на главную">
 				<svg viewBox="0 0 114 82" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path
 						d="M37.986 4.87742C39.9336 2.95328 43.0664 2.95329 45.014 4.87742L77.9769 37.4431C79.9581 39.4005 79.9581 42.5995 77.9769 44.5569L45.014 77.1226C43.0664 79.0467 39.9336 79.0467 37.986 77.1226L5.02313 44.5569C3.04186 42.5995 3.04186 39.4005 5.02314 37.4431L37.986 4.87742Z"
@@ -14,6 +14,7 @@
 			<nav class="nav header__nav">
 				<div class="nav__inner">
 					<p class="nav__title">МЕНЮ</p>
+
 					<ul class="nav__list">
 						<li class="nav__item">
 							<a class="nav__link @@if (context.page === 'home') {nav__link--active}" href="./index.html">Главная</a>
@@ -100,7 +101,7 @@
 
 			<a class="header__login-btn" href="login.html">Войти</a>
 
-			<button class="header__hamburger" type="button">
+			<button class="header__hamburger" type="button" aria-label="открыть навигацию">
 				<span class="header__hamburger-line"></span>
 				<span class="header__hamburger-line"></span>
 				<span class="header__hamburger-line"></span>

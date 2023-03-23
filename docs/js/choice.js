@@ -87,7 +87,7 @@ class ProductContent extends React.Component {
 						Найдено: <span>{productArray.length}</span>
 					</p>
 
-					<button className='choice__filter-btn' onClick={asideShow}>
+					<button className='choice__filter-btn' onClick={asideShow} aria-label="Открыть фильтры">
 						<svg className='choice__filter-btn-svg' width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M30 4.33333H25.6071C25.0714 1.84167 22.9286 0 20.3571 0C17.7857 0 15.6429 1.84167 15.1071 4.33333H0V6.5H15.1071C15.6429 8.99167 17.7857 10.8333 20.3571 10.8333C22.9286 10.8333 25.0714 8.99167 25.6071 6.5H30V4.33333ZM20.3571 8.66667C18.5357 8.66667 17.1429 7.25833 17.1429 5.41667C17.1429 3.575 18.5357 2.16667 20.3571 2.16667C22.1786 2.16667 23.5714 3.575 23.5714 5.41667C23.5714 7.25833 22.1786 8.66667 20.3571 8.66667ZM0 21.6667H4.39286C4.92857 24.1583 7.07143 26 9.64286 26C12.2143 26 14.3571 24.1583 14.8929 21.6667H30V19.5H14.8929C14.3571 17.0083 12.2143 15.1667 9.64286 15.1667C7.07143 15.1667 4.92857 17.0083 4.39286 19.5H0V21.6667ZM9.64286 17.3333C11.4643 17.3333 12.8571 18.7417 12.8571 20.5833C12.8571 22.425 11.4643 23.8333 9.64286 23.8333C7.82143 23.8333 6.42857 22.425 6.42857 20.5833C6.42857 18.7417 7.82143 17.3333 9.64286 17.3333Z" />
 						</svg>
@@ -125,12 +125,15 @@ class ProductContent extends React.Component {
 								<li key={el.id} className="choice__product-item">
 									<a className="choice__product-link" href={el.link}>
 										<div className="choice__product-img-wrapper">
-											<img className="choice__product-img" src={el.img} alt="photo" />
+											<picture>
+												<source srcset={el.img.substring(0, el.img.lastIndexOf('.'))+'.webp'} type="image/webp" />
+												<img class="choice__product-img" src={el.img} alt="фото" />
+											</picture>
 
 											{productSale}
 										</div>
 
-										<p className="choice__product-title">{el.name}</p>
+										<h2 className="choice__product-title">{el.name}</h2>
 
 										<div className="choice__product-tag-box">
 											<p className="choice__product-tag">{el.category}</p>

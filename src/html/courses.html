@@ -18,7 +18,7 @@
 			<div class="container">
 				<ul class="breadcrumbs__list">
 					<li class="breadcrumbs__item">
-						<a class="breadcrumbs__link" href="index.html">
+						<a class="breadcrumbs__link" href="index.html" aria-label="вернуться на главную">
 							<svg class="breadcrumbs__link-svg" width="30" height="27" viewBox="0 0 30 27" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
 								<path
@@ -41,10 +41,16 @@
 				<ul class="courses__list">
 					<li class="courses__item hidden">
 						<a class="courses__link" href="choice.html?profession=programming">
-							<img class="courses__img" src="./img/courses/programming.jpg" alt="programming">
+							<picture>
+								<source srcset="./img/courses/programming.webp" type="image/webp">
+								<img class="courses__img" src="./img/courses/programming.jpg" alt="programming">
+							</picture>
 
-							<img class="courses__img courses__img--hidden" src="./img/courses/programming-hover.jpg"
-								alt="programming">
+							<picture>
+								<source srcset="./img/courses/programming-hover.webp" type="image/webp">
+								<img class="courses__img courses__img--hidden" src="./img/courses/programming-hover.jpg"
+									alt="programming">
+							</picture>
 
 							<p class="courses__title">Программирование</p>
 							<p class="courses__text">Тестирование, Frontend, Backend, Алгоритмы</p>
@@ -53,9 +59,15 @@
 
 					<li class="courses__item hidden">
 						<a class="courses__link" href="choice.html?profession=data">
-							<img class="courses__img" src="./img/courses/data.jpg" alt="data">
+							<picture>
+								<source srcset="./img/courses/data.webp" type="image/webp">
+								<img class="courses__img" src="./img/courses/data.jpg" alt="data">
+							</picture>
 
-							<img class="courses__img courses__img--hidden" src="./img/courses/data-hover.jpg" alt="data">
+							<picture>
+								<source srcset="./img/courses/data-hover.webp" type="image/webp">
+								<img class="courses__img courses__img--hidden" src="./img/courses/data-hover.jpg" alt="data">
+							</picture>
 
 							<p class="courses__title">Анализ данных</p>
 							<p class="courses__text">SQL, Аналитика, Data Science, Архитектура данных</p>
@@ -64,9 +76,15 @@
 
 					<li class="courses__item hidden">
 						<a class="courses__link" href="choice.html?profession=design">
-							<img class="courses__img" src="./img/courses/design.jpg" alt="design">
+							<picture>
+								<source srcset="./img/courses/design.webp" type="image/webp">
+								<img class="courses__img" src="./img/courses/design.jpg" alt="design">
+							</picture>
 
-							<img class="courses__img courses__img--hidden" src="./img/courses/design-hover.jpg" alt="design">
+							<picture>
+								<source srcset="./img/courses/design-hover.webp" type="image/webp">
+								<img class="courses__img courses__img--hidden" src="./img/courses/design-hover.jpg" alt="design">
+							</picture>
 
 							<p class="courses__title">Дизайн</p>
 							<p class="courses__text">Графический, интерфейсний, коммуникационный</p>
@@ -75,9 +93,16 @@
 
 					<li class="courses__item hidden">
 						<a class="courses__link" href="choice.html?profession=management">
-							<img class="courses__img" src="./img/courses/management.jpg" alt="management">
+							<picture>
+								<source srcset="./img/courses/management.webp" type="image/webp">
+								<img class="courses__img" src="./img/courses/management.jpg" alt="management">
+							</picture>
 
-							<img class="courses__img courses__img--hidden" src="./img/courses/management-hover.jpg" alt="management">
+							<picture>
+								<source srcset="./img/courses/management-hover.webp" type="image/webp">
+								<img class="courses__img courses__img--hidden" src="./img/courses/management-hover.jpg"
+									alt="management">
+							</picture>
 
 							<p class="courses__title">Менеджмент</p>
 							<p class="courses__text">Управление проктами и командами, IT-рекрутмент</p>
@@ -86,9 +111,15 @@
 
 					<li class="courses__item hidden">
 						<a class="courses__link" href="choice.html?profession=marketing">
-							<img class="courses__img" src="./img/courses/marketing.jpg" alt="marketing">
+							<picture>
+								<source srcset="./img/courses/marketing.webp" type="image/webp">
+								<img class="courses__img" src="./img/courses/marketing.jpg" alt="marketing">
+							</picture>
 
-							<img class="courses__img courses__img--hidden" src="./img/courses/marketing-hover.jpg" alt="marketing">
+							<picture>
+								<source srcset="./img/courses/marketing-hover.webp" type="image/webp">
+								<img class="courses__img courses__img--hidden" src="./img/courses/marketing-hover.jpg" alt="marketing">
+							</picture>
 
 							<p class="courses__title">Маркетинг</p>
 							<p class="courses__text">Интернет-маркетинг, управление трафиком</p>
@@ -97,9 +128,15 @@
 
 					<li class="courses__item hidden">
 						<a class="courses__link" href="choice.html?profession=english">
-							<img class="courses__img" src="./img/courses/english.jpg" alt="english">
+							<picture>
+								<source srcset="./img/courses/english.webp" type="image/webp">
+								<img class="courses__img" src="./img/courses/english.jpg" alt="english">
+							</picture>
 
-							<img class="courses__img courses__img--hidden" src="./img/courses/english-hover.jpg" alt="english">
+							<picture>
+								<source srcset="./img/courses/english-hover.webp" type="image/webp">
+								<img class="courses__img courses__img--hidden" src="./img/courses/english-hover.jpg" alt="english">
+							</picture>
 
 							<p class="courses__title">Английский</p>
 							<p class="courses__text">Для работы и жизни</p>
@@ -314,49 +351,22 @@
 					Истории <strong>выпускников</strong>
 				</h2>
 
-				<ul class="history__list hidden">
-					<li class="history__item">
-						<div class="history__item-inner">
-							<picture class="history__picture">
-								<source srcset="./img/courses/slider/history-1.webp" type="image/webp">
-								<img class="history__img" src="./img/courses/slider/history-1.png" alt="history">
-							</picture>
+				<div class="history__list hidden">
+					<div class="history__item">
+						<picture class="history__picture">
+							<source media="(max-width: 767px)" srcset="./img/courses/slider/history-1-small.webp" type="image/webp">
+							<source media="(max-width: 767px)" srcset="./img/courses/slider/history-1-small.jpg">
+							<source srcset="./img/courses/slider/history-1.webp" type="image/webp">
+							<img class="history__img" src="./img/courses/slider/history-1.jpg" alt="history">
+						</picture>
 
-							<p class="history__title-3 title-3">
-								Из разнорабочего — в разработчики: история Дамира
-							</p>
+						<p class="history__title-3 title-3">
+							Из разнорабочего — в разработчики: история Дамира
+						</p>
 
-							<div class="history__btn-box">
-								<div class="video-play">
-									<a class="video-play__btn" href="https://youtu.be/COaXBeiKezw" data-fancybox>
-										<svg class="video-play__svg" width="32" height="34" viewBox="0 0 32 34" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M30.6104 16.1476C31.2466 16.5378 31.2466 17.4622 30.6104 17.8524L9.52289 30.7882C8.85658 31.197 8 30.7175 8 29.9358L8 4.06416C8 3.28247 8.85658 2.80302 9.52289 3.21176L30.6104 16.1476Z"
-												fill="#23BDEE" />
-										</svg>
-									</a>
-								</div>
-
-								<a class="history__link-btn" href="login.html">Попробовать бесплатно</a>
-							</div>
-						</div>
-					</li>
-
-
-					<li class="history__item">
-						<div class="history__item-inner">
-							<picture class="history__picture">
-								<source srcset="./img/courses/slider/history-2.webp" type="image/webp">
-								<img class="history__img" src="./img/courses/slider/history-2.png" alt="history">
-							</picture>
-
-							<p class="history__title-3 title-3">
-								Из медсестры — в маркетинг: история Светы
-							</p>
-
-							<div class="history__btn-box">
-								<a class="video-play__btn" href="https://youtu.be/sJQEJvTVwys" data-fancybox>
+						<div class="history__btn-box">
+							<div class="video-play">
+								<a class="video-play__btn" href="https://youtu.be/COaXBeiKezw" data-fancybox>
 									<svg class="video-play__svg" width="32" height="34" viewBox="0 0 32 34" fill="none"
 										xmlns="http://www.w3.org/2000/svg">
 										<path
@@ -364,39 +374,66 @@
 											fill="#23BDEE" />
 									</svg>
 								</a>
-
-								<a class="history__link-btn" href="login.html">Попробовать бесплатно</a>
 							</div>
+
+							<a class="history__link-btn" href="login.html">Попробовать бесплатно</a>
 						</div>
-					</li>
+					</div>
 
 
-					<li class="history__item">
-						<div class="history__item-inner">
-							<picture class="history__picture">
-								<source srcset="./img/courses/slider/history-3.webp" type="image/webp">
-								<img class="history__img" src="./img/courses/slider/history-3.png" alt="history">
-							</picture>
+					<div class="history__item">
+						<picture class="history__picture">
+							<source media="(max-width: 767px)" srcset="./img/courses/slider/history-2-small.webp" type="image/webp">
+							<source media="(max-width: 767px)" srcset="./img/courses/slider/history-2-small.jpg">
+							<source srcset="./img/courses/slider/history-2.webp" type="image/webp">
+							<img class="history__img" src="./img/courses/slider/history-2.jpg" alt="history">
+						</picture>
 
-							<p class="history__title-3 title-3">
-								Из сварщика — в менеджеры: история Дениса
-							</p>
+						<p class="history__title-3 title-3">
+							Из медсестры — в маркетинг: история Светы
+						</p>
 
-							<div class="history__btn-box">
-								<a class="video-play__btn" href="https://youtu.be/_KUyt-aTvGc" data-fancybox>
-									<svg class="video-play__svg" width="32" height="34" viewBox="0 0 32 34" fill="none"
-										xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M30.6104 16.1476C31.2466 16.5378 31.2466 17.4622 30.6104 17.8524L9.52289 30.7882C8.85658 31.197 8 30.7175 8 29.9358L8 4.06416C8 3.28247 8.85658 2.80302 9.52289 3.21176L30.6104 16.1476Z"
-											fill="#23BDEE" />
-									</svg>
-								</a>
+						<div class="history__btn-box">
+							<a class="video-play__btn" href="https://youtu.be/sJQEJvTVwys" data-fancybox>
+								<svg class="video-play__svg" width="32" height="34" viewBox="0 0 32 34" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M30.6104 16.1476C31.2466 16.5378 31.2466 17.4622 30.6104 17.8524L9.52289 30.7882C8.85658 31.197 8 30.7175 8 29.9358L8 4.06416C8 3.28247 8.85658 2.80302 9.52289 3.21176L30.6104 16.1476Z"
+										fill="#23BDEE" />
+								</svg>
+							</a>
 
-								<a class="history__link-btn" href="./login.html">Попробовать бесплатно</a>
-							</div>
+							<a class="history__link-btn" href="login.html">Попробовать бесплатно</a>
 						</div>
-					</li>
-				</ul>
+					</div>
+
+
+					<div class="history__item">
+						<picture class="history__picture">
+							<source media="(max-width: 767px)" srcset="./img/courses/slider/history-3-small.webp" type="image/webp">
+							<source media="(max-width: 767px)" srcset="./img/courses/slider/history-3-small.jpg">
+							<source srcset="./img/courses/slider/history-3.webp" type="image/webp">
+							<img class="history__img" src="./img/courses/slider/history-3.jpg" alt="history">
+						</picture>
+
+						<p class="history__title-3 title-3">
+							Из сварщика — в менеджеры: история Дениса
+						</p>
+
+						<div class="history__btn-box">
+							<a class="video-play__btn" href="https://youtu.be/_KUyt-aTvGc" data-fancybox>
+								<svg class="video-play__svg" width="32" height="34" viewBox="0 0 32 34" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M30.6104 16.1476C31.2466 16.5378 31.2466 17.4622 30.6104 17.8524L9.52289 30.7882C8.85658 31.197 8 30.7175 8 29.9358L8 4.06416C8 3.28247 8.85658 2.80302 9.52289 3.21176L30.6104 16.1476Z"
+										fill="#23BDEE" />
+								</svg>
+							</a>
+
+							<a class="history__link-btn" href="./login.html">Попробовать бесплатно</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 

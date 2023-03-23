@@ -123,7 +123,11 @@ class ArticalsContent extends React.Component {
 								<li key={el.id} class="blog__item">
 									<a class="blog__item-link" href={el.link}>
 										<div class="blog__item-img-wrapper">
-											<img class="blog__item-img" src={el.img} alt="превью статьи" />
+											<picture>
+												<source srcset={el.img.substring(0, el.img.lastIndexOf('.'))+'.webp'} type="image/webp" />
+												<img class="blog__item-img" src={el.img} alt="превью статьи" />
+											</picture>
+											
 											<p class="blog__item-category">{el.category}</p>
 											<p class="blog__item-date">{el.date}</p>
 										</div>
