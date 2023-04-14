@@ -16,9 +16,7 @@ $(window).on('load', function () {
 			vertical: true
 		});
 	}
-})
 
-$(window).on('load', function () {
 	if ($('.history__list').length !== 0) {
 		$('.history__list').slick({
 			dots: false,

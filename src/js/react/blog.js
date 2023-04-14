@@ -122,17 +122,19 @@ class ArticalsContent extends React.Component {
 							return (
 								<li key={el.id} class="blog__item">
 									<a class="blog__item-link" href={el.link}>
-										<div class="blog__item-img-wrapper">
-											<picture>
-												<source srcset={el.img.substring(0, el.img.lastIndexOf('.'))+'.webp'} type="image/webp" />
-												<img class="blog__item-img" src={el.img} alt="превью статьи" />
-											</picture>
-											
-											<p class="blog__item-category">{el.category}</p>
-											<p class="blog__item-date">{el.date}</p>
-										</div>
+										<artical>
+											<div class="blog__item-img-wrapper">
+												<picture>
+													<source srcset={el.img.substring(0, el.img.lastIndexOf('.')) + '.webp'} type="image/webp" />
+													<img class="blog__item-img" src={el.img} alt="превью статьи" />
+												</picture>
 
-										<h2 class="blog__item-title">{el.name}</h2>
+												<p class="blog__item-category">{el.category}</p>
+												<time class="blog__item-date">{el.date}</time>
+											</div>
+
+											<h2 class="blog__item-title">{el.name}</h2>
+										</artical>
 									</a>
 								</li>
 							)
