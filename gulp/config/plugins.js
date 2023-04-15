@@ -27,7 +27,7 @@ export default {
 	},
 
 	webpack: {
-		mode: 'development'
+		mode: 'production'
 	},
 
 	fonter: {
